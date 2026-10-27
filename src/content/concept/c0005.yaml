@@ -1,0 +1,26 @@
+id: C-0005
+title: 유창성 착각
+en: Fluency illusion / Illusion of competence
+origin: Koriat·Bjork(2005) 등
+field: 메타인지
+line: 술술 읽히는 느낌을 '안다'로 착각해, 실제보다 많이 안다고 판단하는 현상
+grade: B
+replication: 대체로 확인
+studies:
+  - source: koriat-2005
+    who: 대학생
+    result: 답이 눈앞에 있을 때 공부하면 나중에 떠올릴 수 있다고 과대평가함
+  - source: callender-2009
+    who: 대학생
+    result: 교재를 다시 읽어도 이해 문제 성적은 거의 오르지 않았음
+examples:
+  - who: 아이
+    text: 세 번이나 읽었어. 다 알아
+  - who: 아이
+    text: 보면 아는데 안 보면 몰라
+sources: [koriat-2005, callender-2009]
+books: [metacognition, make-it-stick]
+related: [인출 연습, 바람직한 어려움]
+history:
+  - date: '2026.10.27'
+    note: 등재

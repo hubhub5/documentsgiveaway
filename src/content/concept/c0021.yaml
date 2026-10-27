@@ -1,0 +1,22 @@
+id: C-0021
+title: 부모 불안의 전이
+en: Intergenerational transmission of math anxiety
+origin: Maloney 외(2015)
+field: 발달·교육심리학
+line: 부모가 가진 과목 불안이 숙제를 도와주는 과정에서 아이에게 옮겨 가는 현상
+grade: C
+replication: 엇갈림
+caveat: 숙제를 도와주지 않는 부모에게선 관계가 약했다. 도움의 '방식'이 변수
+studies:
+  - source: maloney-2015
+    who: 초등 1–2학년과 부모
+    result: 수학 불안 높은 부모가 숙제를 자주 도우면 아이 수학 성취가 낮고 불안이 높아짐
+examples:
+  - who: 엄마
+    text: 엄마도 수학은 진짜 못했어
+sources: [maloney-2015]
+books: [reasonless-calm]
+related: [시험 불안]
+history:
+  - date: '2026.10.27'
+    note: 등재

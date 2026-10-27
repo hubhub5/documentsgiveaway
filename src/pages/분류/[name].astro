@@ -1,0 +1,54 @@
+---
+import Base from '../../layouts/Base.astro';
+import Block from '../../components/Block.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import { registry, linkCount, lastDate } from '../../lib/docs';
+import { categories } from '../../data/categories';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { name: c.name }, props: { c } }));
+}
+const { c } = Astro.props;
+const reg = await registry();
+const list = reg.docs.filter((d) => (d.kind === 'problem' ? d.data.category : d.ns) === c.name);
+---
+<Base title={`분류: ${c.name}`} current="분류" description={`${c.name} — ${c.line}`}>
+  <div class="wrap page">
+    <div class="page-head">
+      <p class="kicker mono">{c.code} · {list.length}건</p>
+      <h1>{c.name}</h1>
+      <p>{c.line}</p>
+    </div>
+    <div class="sort mono" role="group" aria-label="정렬">
+      <button data-k="id" class="on">번호순</button><button data-k="date">최근순</button><button data-k="links">연결 많은 순</button>
+    </div>
+    <div class="blocks" id="grid">
+      {list.map((d, i) => (
+        <>
+          <div class="cell" data-id={d.id} data-date={lastDate(d)} data-links={linkCount(d, reg)}><Block doc={d} reg={reg} /></div>
+          {(i + 1) % 12 === 0 && <div class="block ad mono" data-ad>AD · GRID</div>}
+        </>
+      ))}
+    </div>
+    <AdSlot name="DOC-END" />
+  </div>
+</Base>
+<style>
+  .sort { display: flex; gap: 0; margin-bottom: 14px; }
+  .sort button { border: 1px solid var(--line-2); padding: 4px 10px; margin-right: -1px; color: var(--mute); }
+  .sort button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .cell { display: contents; }
+</style>
+<script>
+  const grid = document.getElementById('grid')!;
+  document.querySelectorAll<HTMLButtonElement>('.sort button').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('.sort button').forEach((x) => x.classList.toggle('on', x === b));
+    const k = b.dataset.k!;
+    const cells = [...grid.querySelectorAll<HTMLElement>('.cell')];
+    cells.sort((x, y) => k === 'id' ? x.dataset.id!.localeCompare(y.dataset.id!)
+      : k === 'date' ? y.dataset.date!.localeCompare(x.dataset.date!)
+      : Number(y.dataset.links) - Number(x.dataset.links));
+    grid.querySelectorAll('[data-ad]').forEach((a) => a.remove());
+    cells.forEach((c) => grid.appendChild(c));
+  }));
+</script>

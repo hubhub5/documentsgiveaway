@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import AdSlot from '../components/AdSlot.astro';
+import { registry, lastDate } from '../lib/docs';
+import { categories, catUrl } from '../data/categories';
+import { site } from '../config/site';
+
+const reg = await registry();
+const count = (ns: string) => reg.docs.filter((d) => d.ns === ns).length;
+const inCat = (name: string) => reg.docs.filter((d) => (d.kind === 'problem' ? d.data.category : d.ns) === name).length;
+
+const changes = reg.docs.flatMap((d) => d.data.history.map((h: any) => ({ ...h, doc: d })))
+  .sort((a, b) => b.date.localeCompare(a.date) || b.doc.id.localeCompare(a.doc.id)).slice(0, 12);
+const latest = reg.docs.map(lastDate).sort().at(-1);
+
+// 분류마다 하나씩, 30초 이하 트리거만
+const pick = categories.filter((c) => c.ns === '문제' || c.ns === '부모').flatMap((c) => {
+  const t = reg.docs.filter((d) => d.kind === 'problem' && d.data.category === c.name && !d.title.includes('/'))
+    .flatMap((d) => d.data.triggers.map((x: any) => ({ ...x, doc: d })))
+    .find((x) => /^\d+초$/.test(x.time) && parseInt(x.time) <= 30);
+  return t ? [t] : [];
+});
+---
+<Base>
+  <div class="wrap page home">
+    <section class="home-head">
+      <p class="mono mute">아카이브 · {site.author} 엮음</p>
+      <h1>공부하다 마주치는<br />작은 문제들의 사전</h1>
+      <p class="lead">외웠는데 안 나오는 순간, 계획이 밀리다 놓아 버리는 순간, 친구 진도에 마음이 급해지는 순간. 그 상황 하나하나를 무너지는 흐름과 다시 살아나는 트리거로 기록합니다.</p>
+      <button class="home-search" type="button" onclick="document.getElementById('open-search').click()">
+        <span>지금 겪는 상황을 검색</span><kbd class="mono">/</kbd>
+      </button>
+      <p class="stat mono">
+        문제 {count('문제')} · 부모 {count('부모')} · 개념 {count('개념')} · 방법 {count('방법')} · 오해 {count('오해')} · 출처 {reg.sources.size} · 최근 개정 {latest}
+      </p>
+    </section>
+
+    <section class="home-sec">
+      <div class="sec-row"><h2>분류</h2><a class="mono" href="/분류/">전체 보기 →</a></div>
+      <div class="blocks">
+        {categories.map((c) => (
+          <a class="block" href={catUrl(c.name)}>
+            <span class="mono"><span>{c.code}</span><span>{inCat(c.name)}건</span></span>
+            <h3>{c.name}</h3>
+            <p>{c.line}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {pick.length > 0 && (
+      <section class="home-sec">
+        <div class="sec-row"><h2>30초 안에 할 수 있는 것</h2><a class="mono" href="/트리거/">트리거 모음 →</a></div>
+        <ul class="quick">
+          {pick.map((t) => (
+            <li><span class="mono">{t.time}</span><b>{t.text.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_: string, a: string, b?: string) => b ?? a)}</b><a class="wl" href={t.doc.url}>{t.doc.title}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <AdSlot name="HOME" />
+
+    <section class="home-sec">
+      <div class="sec-row"><h2>최근 변경</h2><a class="mono" href="/최근변경/">전체 →</a></div>
+      <table class="tbl changes">
+        <tbody>
+          {changes.map((c) => (
+            <tr><td class="mono">{c.date}</td><td class="mono mute">{c.doc.id}</td><td><a class="wl" href={c.doc.url}>{c.doc.title}</a></td><td class="mute">{c.note}</td></tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="home-sec home-foot">
+      <a href="/임의문서/" class="mono">임의 문서 열기 [R]</a>
+      <a href="/편집원칙/" class="mono">편집 원칙</a>
+      <a href="/근거등급/" class="mono">근거 등급 A–D</a>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .home-head { padding: 48px 0 40px; border-bottom: 1px solid var(--ink); max-width: 760px; }
+  .home-head h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.2; margin: 14px 0 18px; }
+  .lead { color: var(--ink-2); font-size: 16px; max-width: 600px; }
+  .home-search {
+    display: flex; align-items: center; width: 100%; max-width: 560px; margin-top: 28px;
+    height: 52px; padding: 0 16px; border: 1px solid var(--ink); background: var(--paper);
+    color: var(--mute); font-size: 16px; text-align: left;
+  }
+  .home-search kbd { margin-left: auto; border: 1px solid var(--line-2); padding: 0 6px; }
+  .home-search:hover { color: var(--ink); }
+  .stat { margin-top: 16px; color: var(--mute); }
+  .home-sec { margin-top: 56px; }
+  .sec-row { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+  .sec-row h2 { font-size: 16px; }
+  .sec-row a { color: var(--mute); }
+  .quick { border-top: 1px solid var(--ink); }
+  .quick li { display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .quick .mono { color: var(--mute); }
+  .quick b { font-weight: 700; }
+  .quick a { font-size: 13px; color: var(--ink-2); }
+  @media (max-width: 640px) { .quick li { grid-template-columns: 48px 1fr; } .quick a { grid-column: 2; } }
+  .changes td { padding: 8px 12px 8px 0; }
+  @media (max-width: 640px) { .changes td:nth-child(4) { display: none; } .changes td:nth-child(2) { display: none; } }
+  .home-foot { display: flex; gap: 20px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 16px; }
+  .home-foot a { color: var(--ink-2); }
+</style>

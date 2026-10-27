@@ -1,0 +1,19 @@
+id: X-0004
+title: 여러 번 읽으면 외워진다
+claim: 교과서를 다섯 번 읽으면 저절로 외워진다
+grade: A
+evidence:
+  - 다시 읽기만으로는 이해 문제 성적이 거의 오르지 않았음 (Callender·McDaniel 2009)
+  - 네 번 읽은 집단보다 한 번 읽고 세 번 꺼낸 집단이 1주 뒤 더 기억함 (Roediger·Karpicke 2006)
+spread:
+  - 읽을수록 익숙해져서 아는 느낌이 커짐 → [[유창성 착각]]
+  - 가장 쉽고 덜 괴로운 방법
+instead:
+  - 한 번 읽고 덮은 뒤 [[백지 인출]]
+  - 읽을 땐 문단마다 [[읽고 한 줄로 말하기]]
+sources: [callender-2009, roediger-2006]
+books: [make-it-stick, metacognition]
+related: [벼락치기가 효율적이다]
+history:
+  - date: '2026.10.27'
+    note: 등재

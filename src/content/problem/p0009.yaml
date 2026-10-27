@@ -1,0 +1,103 @@
+id: P-0009
+title: 책상에 앉기까지 오래 걸림
+category: 시작·지속
+line: 공부하겠다고 말한 뒤 물 마시고, 정리하고, 휴대폰 보다가 한 시간이 지나는 상황
+ages: [초고, 중등, 고등]
+grade: A
+facets:
+  when: [시작 전]
+  where: [집 책상, 거실]
+  with: [혼자, 엄마 옆]
+  subject: [전 과목]
+  freq: 거의 매일
+factors:
+  main: 회피
+  sub: [불안·긴장, 주의 분산]
+says:
+  - who: 아이
+    text: 이것만 보고 할게
+  - who: 아이
+    text: 책상이 너무 지저분해서 정리부터
+  - who: 엄마
+    text: 아까 한다며
+signals:
+  body: [자꾸 일어남, 몸이 무거움]
+  thought: ['조금만 쉬고', '기분이 안 나']
+  action: [책상 정리, 간식, 필기구 고르기]
+scene:
+  - time: 화요일 밤 8시 10분, 방문 앞
+    lines:
+      - who: 엄마
+        text: 이제 시작하자
+      - who: 아이
+        text: 응, 물만 마시고
+  - time: 같은 날 9시 5분
+    lines:
+      - who: 아이
+        text: (침대에 누워 휴대폰) 10분만
+flow:
+  trigger: 오늘 할 분량이 머릿속에 한꺼번에 떠오름
+  thought: '"이거 언제 다 해"'
+  feel: 가슴이 답답하고 몸이 무거워짐
+  pattern: 준비 행동(정리, 간식)으로 시작을 늦춤
+  break: 늦어진 시간 때문에 '오늘은 망했다'로 넘어감
+  residue: 다음 날 시작이 더 무거워짐 → [[하루 밀리면 전부 놓아버림]]
+causes:
+  - 공부가 싫은 게 아니라 시작할 때의 기분을 피하는 것 → [[미루기와 기분 조절]]
+  - 시작 조건이 '하고 싶을 때'처럼 흐릿함 → [[실행 의도]]
+  - 할 일 전체를 한 덩어리로 봄 → [[인지 부하]]
+triggers:
+  - text: 제일 쉬운 한 줄만 2분 하기
+    when: 앉기 싫을 때
+    time: 2분
+    who: 본인
+    grade: D
+  - text: '"수학 먼저, 영어 먼저?" 둘 중 고르게 하기'
+    when: 시작 권할 때
+    time: 10초
+    who: 엄마
+    grade: B
+  - text: 저녁 식탁 치우는 걸 시작 신호로 정해 두기
+    when: 하루 전
+    time: 3분
+    who: 같이
+    grade: A
+solutions:
+  - method: '[[2분 시작]]'
+    basis: '[[미루기와 기분 조절]]'
+    grade: D
+    time: 2분
+    age: 전 연령
+  - method: '[[만약-그러면 계획]]'
+    basis: '[[실행 의도]]'
+    grade: A
+    time: 3분
+    age: 초4 이상
+  - method: '[[선택지 두 개 주기]]'
+    basis: '[[자율성 지지 양육]]'
+    grade: B
+    time: 10초
+    age: 전 연령
+talk:
+  - avoid: 도대체 언제 할 건데
+    instead: 수학이랑 영어 중에 뭐부터 할래?
+  - avoid: 너는 의지가 없어
+    instead: 제일 쉬운 거 하나만 2분 해 볼까
+small:
+  today: 오늘 할 일 중 제일 쉬운 한 줄에 동그라미
+  week: 시작 신호 하나(저녁 설거지 끝)를 정해서 다섯 번 지키기
+  month: 앉기까지 걸린 시간을 일주일 단위로 적어 비교
+recovery:
+  - 준비 행동 없이 바로 펴는 날이 생김
+  - 2분만 하겠다고 앉았다가 더 이어 간 날이 생김
+expert:
+  - 공부뿐 아니라 씻기, 먹기까지 시작이 어려울 때
+  - 우울한 기분이 2주 넘게 이어질 때
+limits: 2분 시작은 현장에서 널리 쓰이지만 직접 실험 근거는 없다(D). 실행 의도는 근거가 단단하다(A).
+leadsTo: [하루 밀리면 전부 놓아버림]
+related: [매번 계획보다 늦어지다 포기함, 휴대폰을 내려놓지 못함]
+sources: [steel-2007, sirois-2013, gollwitzer-2006, grolnick-1989]
+books: [atomic-habits, unknown]
+history:
+  - date: '2026.10.27'
+    note: 등재

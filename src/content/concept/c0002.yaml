@@ -1,0 +1,30 @@
+id: C-0002
+title: 간격 효과
+en: Spacing effect / Distributed practice
+origin: Ebbinghaus(1885) 이후 반복 확인
+field: 인지심리학
+line: 같은 시간을 써도 한 번에 몰아 보는 것보다 나눠서 볼 때 오래 남는다
+grade: A
+replication: 반복 확인
+caveat: 언제 다시 볼지는 얼마나 오래 기억해야 하는지에 따라 달라진다
+studies:
+  - source: cepeda-2006
+    who: 실험 수백 건 종합
+    result: 분산 학습이 몰아서 학습보다 장기 기억에서 꾸준히 앞섬
+  - source: kornell-2009
+    who: 대학생
+    result: 카드를 나눠 본 쪽이 대부분에게 나았지만 다수는 몰아 보기가 낫다고 믿었음
+  - source: dunlosky-2013
+    who: 연구 종합
+    result: 분산 학습을 유용성 높음으로 평가
+examples:
+  - who: 아이
+    text: 오늘 한 번에 다 끝내면 되잖아
+  - who: 엄마
+    text: 오늘 반, 모레 반 해 볼까?
+sources: [cepeda-2006, kornell-2009, dunlosky-2013]
+books: [make-it-stick]
+related: [인출 연습, 망각 곡선, 바람직한 어려움]
+history:
+  - date: '2026.10.27'
+    note: 등재

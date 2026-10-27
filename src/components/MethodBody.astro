@@ -1,0 +1,32 @@
+---
+import Sec from './Sec.astro';
+import Wiki from './Wiki.astro';
+import Grade from './Grade.astro';
+interface Props { d: any }
+const { d } = Astro.props;
+---
+<div class="info">
+  <div class="row"><span>시간</span><span class="mono">{d.time}</span></div>
+  <div class="row"><span>준비물</span><span>{d.tools}</span></div>
+  <div class="row"><span>연령</span><span>{d.ages}</span></div>
+  <div class="row"><span>방식</span><span>{d.mode}</span></div>
+  <div class="row"><span>기반 개념</span><span><Wiki t={d.basis.map((b: string) => `[[${b}]]`).join(' · ')} /></span></div>
+  <div class="row"><span>근거 수준</span><span><Grade g={d.grade} long /></span></div>
+</div>
+
+<Sec n="01" id="steps" title="절차">
+  <ol class="causes">{d.steps.map((s: string, i: number) => <li><span class="mono">{i + 1}</span><span><Wiki t={s} /></span></li>)}</ol>
+</Sec>
+
+<Sec n="02" id="mistakes" title="흔한 실수">
+  <ul class="plain check">{d.mistakes.map((s: string) => <li><Wiki t={s} /></li>)}</ul>
+</Sec>
+
+{d.sheet && (
+  <Sec n="03" id="sheet" title="기록 양식" note="인쇄해서 쓰는 칸">
+    <div class="scroll-x">
+      <table class="tbl"><thead><tr>{d.sheet.map((c: string) => <th>{c}</th>)}</tr></thead>
+        <tbody>{[0, 1, 2].map(() => <tr>{d.sheet.map(() => <td>&nbsp;</td>)}</tr>)}</tbody></table>
+    </div>
+  </Sec>
+)}

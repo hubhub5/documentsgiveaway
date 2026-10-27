@@ -1,0 +1,6 @@
+---
+import { registry, wiki } from '../lib/docs';
+interface Props { t: string }
+const reg = await registry();
+---
+<Fragment set:html={wiki(Astro.props.t, reg)} />

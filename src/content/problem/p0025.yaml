@@ -1,0 +1,84 @@
+id: P-0025
+title: 혼난 과목을 피함
+category: 관계
+line: 그 과목 때문에 크게 혼난 뒤로 그 과목 책만 보면 몸이 먼저 피하는 상황
+ages: [초저, 초고, 중등, 고등]
+grade: C
+facets:
+  when: [시작 전]
+  where: [집 책상]
+  with: [혼자, 엄마 옆]
+  subject: [수리, 암기, 전 과목]
+  freq: 거의 매일
+factors:
+  main: 과거 경험
+  sub: [회피, 수치심·자책]
+says:
+  - who: 아이
+    text: 수학 얘기만 하면 짜증 나
+  - who: 아이
+    text: 그건 나중에 할게
+signals:
+  body: [그 책을 볼 때 배가 조임]
+  thought: ['또 혼날 거야', '난 그 과목 못해']
+  action: [그 과목 숙제를 마지막에 하거나 빼먹음]
+flow:
+  trigger: 그 과목 숙제나 책이 눈에 들어옴
+  thought: '"그때처럼 또…"'
+  feel: 배나 가슴이 조이고 짜증이 올라옴
+  pattern: 다른 과목부터 하고 그 과목은 시간이 없다며 미룸
+  break: 공부량 차이로 실력 차이가 실제로 벌어짐
+  residue: '"난 원래 그 과목 못해"로 굳어짐 → [[잘하던 과목에서 무너진 뒤 피함]]'
+causes:
+  - 혼난 장면이 과목과 함께 몸에 남음
+  - 피하면 당장은 편해서 회피가 강화됨 → [[미루기와 기분 조절]]
+  - 할 수 있다는 경험이 끊김 → [[자기효능감]]
+triggers:
+  - text: 그 과목을 하루 5분, 제일 쉬운 문제부터
+    when: 다른 과목 하기 전
+    time: 5분
+    who: 본인
+    grade: D
+  - text: 엄마가 그때 일을 짧게 사과하기
+    when: 대화할 때
+    time: 1분
+    who: 엄마
+    grade: D
+  - text: 책 펴기 전에 힘 줬다 풀기 한 번
+    when: 앉기 전
+    time: 1분
+    who: 본인
+    grade: A
+solutions:
+  - method: '[[2분 시작]]'
+    basis: '[[자기효능감]]'
+    grade: D
+    time: 2분
+    age: 전 연령
+  - method: '[[힘 줬다 풀기]]'
+    basis: '[[이완 훈련]]'
+    grade: A
+    time: 1–2분
+    age: 전 연령
+talk:
+  - avoid: 수학을 왜 맨날 미뤄
+    instead: 그때 엄마가 너무 크게 혼냈지. 미안해
+  - avoid: 다른 건 하면서 이건 왜 안 해
+    instead: 제일 쉬운 거 하나만 같이 해 보자
+small:
+  today: 그 과목 제일 쉬운 문제 세 개만
+  week: 그 과목을 하루 순서 맨 앞에 두는 날 세 번
+  month: 그 과목에서 맞힌 문제 수를 모아 보기
+recovery:
+  - 그 과목 숙제를 미루지 않고 시작함
+  - 그 과목 이야기에 짜증 대신 질문이 나옴
+expert:
+  - 특정 과목 시간마다 공황이나 등교 거부가 반복될 때
+limits: 과목 회피와 과거 처벌의 직접 연구는 적다. 회피·효능감 연구와 현장 관찰에서 추론(C·D).
+leadsTo: [잘하던 과목에서 무너진 뒤 피함]
+related: [책상 앞에서 배나 머리가 아픔, 엄마가 옆에 있으면 더 못함]
+sources: [steel-2007, bandura-1977, manzoni-2008]
+books: [body-keeps-score, between-parent-child, reasonless-calm]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,24 @@
+id: C-0004
+title: 바람직한 어려움
+en: Desirable difficulties
+origin: Robert Bjork(1994)
+field: 인지심리학
+line: 연습할 때 조금 어렵게 느껴지는 조건이 오히려 오래 남는 학습을 만든다
+grade: A
+replication: 대체로 확인
+caveat: 아무 어려움이나 좋은 게 아니다. 꺼내기·나누기·섞기처럼 처리 과정을 늘리는 어려움에 한함
+studies:
+  - source: soderstrom-2015
+    who: 연구 종합
+    result: 연습 중 수행(잘 되는 느낌)과 실제 학습은 따로 움직일 수 있음
+examples:
+  - who: 아이
+    text: 이렇게 하니까 더 못하는 것 같은데
+  - who: 엄마
+    text: 지금 헷갈리는 게 남는 거래
+sources: [soderstrom-2015]
+books: [make-it-stick]
+related: [인출 연습, 간격 효과, 교차 연습, 유창성 착각]
+history:
+  - date: '2026.10.27'
+    note: 등재

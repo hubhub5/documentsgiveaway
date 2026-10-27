@@ -1,0 +1,94 @@
+id: F-0001
+title: 아이보다 내가 더 불안함
+audience: 부모
+category: 부모
+line: 아이 시험 기간이 되면 아이보다 내가 먼저 잠을 설치고, 그 불안이 말과 표정으로 새어 나가는 상황
+ages: [부모]
+grade: C
+facets:
+  when: [시험 직전, 결과 후]
+  where: [거실]
+  with: [엄마 옆]
+  subject: [전 과목]
+  freq: 매주
+factors:
+  main: 불안·긴장
+  sub: [비교·조바심, 부담·기대]
+says:
+  - who: 엄마
+    text: 너 지금 이러고 있을 때야?
+  - who: 엄마
+    text: (속으로) 이번에도 망치면 어떡하지
+  - who: 아이
+    text: 엄마가 더 난리야
+signals:
+  body: [잠이 얕아짐, 가슴 두근거림, 어깨 뭉침]
+  thought: ['우리 애만 뒤처지는 것 같아', '내가 뭘 잘못했나']
+  action: [아이 방을 자주 들여다봄, 학원 정보 검색, 단톡방 확인]
+scene:
+  - time: 시험 사흘 전 밤 10시, 아이 방 문 앞
+    lines:
+      - who: 엄마
+        text: 아직 그거 하고 있어?
+      - who: 아이
+        text: 아 진짜, 나가 줘
+flow:
+  trigger: 시험 일정 공지나 다른 집 진도 소식
+  thought: '"지금 안 잡으면 늦는다"'
+  feel: 가슴이 조이고 잠이 안 옴
+  pattern: 확인, 질문, 잔소리가 늘어남
+  break: 아이가 문을 닫고, 나는 더 불안해짐
+  residue: 아이 시험이 가족 전체의 긴장 기간이 됨 → [[잔소리가 멈추지 않음]]
+causes:
+  - 엄마의 불안이 숙제 도움과 말투를 통해 아이에게 옮겨 감 → [[부모 불안의 전이]]
+  - 다른 집과 비교하며 기준이 계속 올라감 → [[사회 비교]]
+  - 내 불안을 줄이려는 확인 행동이 아이에겐 통제로 느껴짐 → [[심리적 통제]]
+triggers:
+  - text: 아이 방 들어가기 전 날숨 세 번
+    when: 확인하고 싶을 때
+    time: 30초
+    who: 엄마
+    grade: C
+  - text: 내 걱정을 종이에 쓰고 아이에겐 말하지 않기
+    when: 밤에 잠 안 올 때
+    time: 10분
+    who: 엄마
+    grade: B
+  - text: '"이건 내 불안이야" 하고 이름 붙이기'
+    when: 잔소리 직전
+    time: 5초
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[시험 전 걱정 쓰기]]'
+    basis: '[[표현적 글쓰기]]'
+    grade: B
+    time: 10분
+    age: 성인
+  - method: '[[날숨 길게 쉬기]]'
+    basis: '[[느린 호흡]]'
+    grade: C
+    time: 30초
+    age: 성인
+talk:
+  - avoid: 우리 애만 뒤처지면 어떡해
+    instead: 지금 불안한 건 나다. 아이 일과 나눠 보자
+  - avoid: 내가 더 챙겼어야 했는데
+    instead: 나도 처음 해 보는 부모야
+small:
+  today: 아이 방 확인 횟수를 세어만 보기
+  week: 시험 기간 단톡방 알림 끄기
+  month: 내 불안을 털어놓을 어른 한 사람 정하기
+recovery:
+  - 확인하고 싶을 때 한 번 참고 넘어간 날이 생김
+  - 아이가 먼저 시험 이야기를 꺼냄
+expert:
+  - 불안 때문에 내 잠, 식사, 일상이 몇 주째 흔들릴 때
+limits: 부모 불안 전이 연구는 초등 저학년 수학 중심이고 결과도 엇갈린다(C).
+leadsTo: [잔소리가 멈추지 않음]
+related: [다른 집 아이와 비교하게 됨, 엄마가 옆에 있으면 더 못함]
+sources: [maloney-2015, festinger-1954, barber-1996, ramirez-2011, zaccaro-2018]
+books: [reasonless-calm, emotion-coaching]
+history:
+  - date: '2026.10.27'
+    note: 등재

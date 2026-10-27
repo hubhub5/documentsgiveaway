@@ -1,0 +1,24 @@
+id: C-0033
+title: 자기 설명
+en: Self-explanation
+origin: Chi 외(1994)
+field: 인지심리학
+line: 읽으면서 이 문장이 무슨 뜻인지, 앞과 어떻게 이어지는지 스스로 말해 보는 것
+grade: B
+replication: 대체로 확인
+studies:
+  - source: chi-1994
+    who: 미국 8학년
+    result: 혈액 순환 글을 읽으며 스스로 설명하게 한 학생의 이해가 깊었음
+  - source: dunlosky-2013
+    who: 연구 종합
+    result: 자기 설명을 유용성 중간으로 평가
+examples:
+  - who: 엄마
+    text: 방금 읽은 거 엄마한테 한 줄로 말해 줄래?
+sources: [chi-1994, dunlosky-2013]
+books: [metacognition]
+related: [정교화 질문, 상황 모델]
+history:
+  - date: '2026.10.27'
+    note: 등재

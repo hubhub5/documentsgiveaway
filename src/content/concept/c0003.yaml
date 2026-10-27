@@ -1,0 +1,25 @@
+id: C-0003
+title: 교차 연습
+en: Interleaved practice
+origin: Rohrer·Taylor(2007) 등
+field: 인지심리학
+line: 같은 유형을 몰아 풀기보다 여러 유형을 섞어 풀 때 '어떤 방법을 쓸지' 고르는 힘이 자란다
+grade: B
+replication: 대체로 확인
+caveat: 연습하는 동안에는 오히려 더 틀린다. 그래서 효과가 없다고 착각하기 쉽다
+studies:
+  - source: rohrer-2007
+    who: 대학생
+    result: 1주 뒤 시험. 섞어 푼 집단 63% · 유형별로 푼 집단 20% (실험 2)
+  - source: dunlosky-2013
+    who: 연구 종합
+    result: 교차 연습을 유용성 중간으로 평가. 수학·운동 영역 근거가 많음
+examples:
+  - who: 아이
+    text: 문제집 단원별로 풀 땐 다 맞는데 시험은 왜 이래
+sources: [rohrer-2007, dunlosky-2013]
+books: [make-it-stick]
+related: [바람직한 어려움, 간격 효과]
+history:
+  - date: '2026.10.27'
+    note: 등재

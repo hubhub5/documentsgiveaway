@@ -1,0 +1,21 @@
+id: C-0030
+title: 상황 모델
+en: Situation model
+origin: Walter Kintsch(1988)
+field: 인지심리학
+line: 글을 이해한다는 것은 문장을 기억하는 게 아니라 글이 말하는 상황을 머릿속에 짓는 것
+grade: B
+replication: 대체로 확인
+studies:
+  - source: kintsch-1988
+    who: 이론
+    result: 문장 정보와 배경지식이 합쳐져 하나의 상황 표상을 만든다는 모형
+examples:
+  - who: 아이
+    text: 글자는 다 읽었는데 무슨 얘긴지 모르겠어
+sources: [kintsch-1988]
+books: [reading-brain]
+related: [텍스트 구조, 자기 설명]
+history:
+  - date: '2026.10.27'
+    note: 등재

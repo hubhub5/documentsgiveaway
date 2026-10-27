@@ -1,0 +1,24 @@
+id: C-0034
+title: 정교화 질문
+en: Elaborative interrogation
+origin: Pressley 외(1987)
+field: 인지심리학
+line: 사실을 외울 때 '왜 그럴까'를 스스로 묻고 답하면 더 잘 남는다
+grade: B
+replication: 대체로 확인
+studies:
+  - source: pressley-1987
+    who: 대학생
+    result: 문장마다 이유를 스스로 만들어 낸 조건에서 기억이 좋았음
+  - source: dunlosky-2013
+    who: 연구 종합
+    result: 정교화 질문을 유용성 중간으로 평가
+examples:
+  - who: 아이
+    text: 근데 왜 남쪽이 더 따뜻해?
+sources: [pressley-1987, dunlosky-2013]
+books: [make-it-stick]
+related: [자기 설명]
+history:
+  - date: '2026.10.27'
+    note: 등재

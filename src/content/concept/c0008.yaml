@@ -1,0 +1,24 @@
+id: C-0008
+title: 압박 속 수행 저하
+en: Choking under pressure
+origin: Beilock 등
+field: 인지심리학
+line: 잘해야 한다는 압박이 머릿속 작업 공간을 차지해, 평소 하던 것도 안 되는 현상
+grade: B
+replication: 대체로 확인
+studies:
+  - source: beilock-2001
+    who: 대학생
+    result: 압박 조건에서 머릿속 계산이 많이 필요한 문제의 수행이 떨어짐
+  - source: eysenck-2007
+    who: 이론
+    result: 불안이 주의 통제를 방해해 처리 효율이 낮아짐
+examples:
+  - who: 아이
+    text: 집에선 다 풀었던 건데
+sources: [beilock-2001, eysenck-2007]
+books: [unknown]
+related: [시험 불안, 인지 부하, 표현적 글쓰기]
+history:
+  - date: '2026.10.27'
+    note: 등재

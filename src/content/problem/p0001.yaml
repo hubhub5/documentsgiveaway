@@ -1,0 +1,123 @@
+id: P-0001
+title: 외운 것이 떠오르지 않음
+category: 기억·인출
+line: 분명히 외웠는데 시험지 앞에서 안 나오고, 곧바로 "난 머리가 나쁜가" 쪽으로 넘어가는 상황
+ages: [초고, 중등, 고등]
+grade: A
+facets:
+  when: [시험 중, 공부 중]
+  where: [교실, 집 책상]
+  with: [혼자]
+  subject: [암기, 서술]
+  freq: 매주
+factors:
+  main: 수치심·자책
+  sub: [불안·긴장, 신체 각성]
+says:
+  - who: 아이
+    text: 어제 분명히 다 외웠는데 하나도 생각이 안 나
+  - who: 아이
+    text: 나 진짜 머리 나쁜가 봐
+  - who: 엄마
+    text: 그렇게 외우고도 틀렸어?
+signals:
+  body: [얼굴이 달아오름, 숨이 얕아짐, 손에 땀]
+  thought: ['외운 게 다 날아갔다', '또 이러네', '이거 틀리면 끝']
+  action: [같은 문제를 계속 붙잡음, 시계를 자주 봄, 지우개질이 늘어남]
+scene:
+  - time: 목요일 2교시, 사회 단원평가. 3번 문항
+    lines:
+      - who: 아이
+        text: (속으로) 교과서 왼쪽 위에 있던 건데…
+  - time: 같은 날 저녁 6시, 식탁
+    lines:
+      - who: 엄마
+        text: 사회 어땠어?
+      - who: 아이
+        text: 몰라. 나 그냥 머리가 안 좋아
+flow:
+  trigger: 아는 문제인데 첫 단어가 안 떠오름
+  thought: '"이거 외웠는데?"'
+  feel: 얼굴이 뜨거워지고 숨이 짧아짐
+  pattern: 그 문제를 놓지 못하고 같은 기억 경로만 반복해서 더듬음
+  break: '"난 원래 안 돼"로 넘어가면서 남은 문제도 대충 씀'
+  residue: 시험 뒤 그 과목 책을 펴기 싫어짐 → [[혼난 과목을 피함]]
+causes:
+  - 넣는 연습만 하고 꺼내는 연습을 안 했음 → [[인출 연습]]
+  - 긴장이 작업기억 자리를 차지함 → [[시험 불안]] · [[압박 속 수행 저하]]
+  - 읽을 때 익숙했던 느낌을 '안다'로 착각했음 → [[유창성 착각]]
+  - 한 번 막힌 것을 능력 탓으로 돌림 → [[귀인]]
+triggers:
+  - text: 막힌 문제에 별표만 치고 바로 다음 문제로
+    when: 시험 중
+    time: 5초
+    who: 본인
+    grade: C
+  - text: 날숨을 들숨보다 두 배 길게, 세 번
+    when: 얼굴이 달아오를 때
+    time: 30초
+    who: 본인
+    grade: C
+  - text: '"떨리는 건 몸이 준비하는 거다" 하고 속으로 한 번'
+    when: 시험 직전
+    time: 10초
+    who: 본인
+    grade: B
+  - text: 답 말고 '그 페이지에 뭐가 있었는지'부터 떠올리기
+    when: 첫 단어가 안 나올 때
+    time: 20초
+    who: 본인
+    grade: D
+  - text: '"어디까지는 떠올랐어?" 하고 묻기'
+    when: 시험 끝나고 대화
+    time: 1분
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[백지 인출]]'
+    basis: '[[인출 연습]]'
+    grade: A
+    time: 10분
+    age: 초4 이상
+  - method: '[[시험 전 걱정 쓰기]]'
+    basis: '[[표현적 글쓰기]]'
+    grade: B
+    time: 10분
+    age: 중1 이상
+  - method: '[[긴장 다시 읽기]]'
+    basis: '[[각성 재평가]]'
+    grade: B
+    time: 1분
+    age: 중1 이상
+  - method: '[[간격 두고 다시 꺼내기]]'
+    basis: '[[간격 효과]]'
+    grade: A
+    time: 하루 5분
+    age: 전 연령
+talk:
+  - avoid: 그러게 미리미리 했어야지
+    instead: 어디까지는 떠올랐어?
+  - avoid: 그렇게 외우고도 틀려?
+    instead: 시험지 앞에서 제일 먼저 뭐가 막혔어?
+  - avoid: 다음엔 더 많이 외워
+    instead: 이번 주엔 외운 걸 한 번씩 꺼내 보자
+small:
+  today: 오늘 외운 것 중 3개를 책 덮고 빈 종이에 써 보기
+  week: 같은 범위를 이틀 간격으로 두 번 꺼내 보기
+  month: 시험 1주 전부터 하루 10분 [[백지 인출]]
+recovery:
+  - 막힌 문제를 건너뛰고 나중에 돌아온 적이 생김
+  - '"머리가 나빠서" 대신 "그 부분을 안 꺼내 봐서"라고 말함'
+  - 시험 끝난 날에도 그 과목 책을 다시 폄
+expert:
+  - 시험 전 복통·구토가 몇 주째 반복될 때
+  - 시험이 있는 날 등교를 거부할 때
+  - 잠들기 어려운 날이 2주 넘게 이어질 때
+limits: 인출 연습 연구는 대학생 대상이 많다. 초등 저학년에 대한 직접 근거는 적어 초고 이상으로 표시했다.
+leadsTo: [혼난 과목을 피함]
+related: [시험 중 머리가 하얘짐, 읽을 땐 아는데 문제는 못 풂, 틀리면 바로 자책함]
+sources: [roediger-2006, karpicke-2011, smith-2016, ramirez-2011, jamieson-2010, beilock-2001, koriat-2005, weiner-1985]
+books: [unknown, make-it-stick, metacognition]
+history:
+  - date: '2026.10.27'
+    note: 등재

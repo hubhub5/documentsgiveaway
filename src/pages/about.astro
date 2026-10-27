@@ -1,0 +1,21 @@
+---
+import Info from '../layouts/Info.astro';
+import BookList from '../components/BookList.astro';
+import { site } from '../config/site';
+---
+<Info title="이 사전에 대해" code="ABOUT" description={`${site.name}은 ${site.author}가 엮는 학습 문제 아카이브입니다.`}>
+  <table class="tbl">
+    <tbody>
+      <tr><th>엮은이</th><td>{site.author}</td></tr>
+      <tr><th>시작</th><td class="mono">{site.since}</td></tr>
+      <tr><th>대상</th><td>초등 고학년~고등학생 자녀를 둔 부모, 그리고 공부하는 본인</td></tr>
+      <tr><th>다루는 것</th><td>공부 앞에서 생기는 긴장, 자책, 조바심, 부담감, 미루기, 읽기의 어려움</td></tr>
+      <tr><th>다루지 않는 것</th><td>입시 정보, 학원 추천, 진단과 치료</td></tr>
+    </tbody>
+  </table>
+  <h2>엮은이의 책</h2>
+  <BookList ids={['reasonless-calm', 'unknown']} />
+  <h2 id="contact">문의</h2>
+  <p>문서의 오류, 빠진 상황, 강연 문의는 아래 주소로 보내 주세요.</p>
+  <p class="mono">contact@ (주소 확정 전)</p>
+</Info>

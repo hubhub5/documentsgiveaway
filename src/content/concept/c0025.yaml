@@ -1,0 +1,22 @@
+id: C-0025
+title: 완벽주의
+en: Perfectionism
+origin: Hewitt·Flett 등
+field: 성격심리학
+line: 결점 없는 결과를 기준으로 삼고, 거기 못 미치면 스스로를 가혹하게 평가하는 성향
+grade: A
+replication: 반복 확인
+caveat: 높은 기준 자체보다 '남이 나에게 완벽을 요구한다'는 느낌이 더 해롭다는 연구가 많음
+studies:
+  - source: curran-2019
+    who: 영미권 대학생 연구 종합
+    result: 1989–2016년 사이 완벽주의가 늘었고, 사회가 요구한다고 느끼는 완벽주의가 가장 많이 늘었음
+examples:
+  - who: 아이
+    text: 다 맞을 거 아니면 의미 없어
+sources: [curran-2019]
+books: [love-yourself]
+related: [자기 불구화, 자기 자비]
+history:
+  - date: '2026.10.27'
+    note: 등재

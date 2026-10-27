@@ -1,0 +1,101 @@
+id: P-0014
+title: 틀리면 바로 자책함
+category: 감정·자기평가
+line: 한 문제 틀린 걸 보는 순간 '난 바보야'로 넘어가고, 그 뒤 문제는 손에 안 잡히는 상황
+ages: [초고, 중등, 고등]
+grade: B
+facets:
+  when: [공부 중, 결과 후]
+  where: [집 책상]
+  with: [혼자, 엄마 옆]
+  subject: [수리, 전 과목]
+  freq: 거의 매일
+factors:
+  main: 수치심·자책
+  sub: [완벽주의]
+says:
+  - who: 아이
+    text: 나 진짜 바보인가 봐
+  - who: 아이
+    text: 이것도 못 풀면 어떡해
+  - who: 아이
+    text: 몰라, 안 해
+signals:
+  body: [얼굴이 빨개짐, 연필을 세게 쥠]
+  thought: ['난 원래 안 돼', '다른 애들은 다 하는데']
+  action: [지우개로 세게 문지름, 문제집을 덮음, 울음]
+scene:
+  - time: 수요일 밤 9시, 식탁. 수학 익힘책 채점 중
+    lines:
+      - who: 엄마
+        text: 7번 틀렸네
+      - who: 아이
+        text: (연필을 내려놓으며) 나 원래 수학 못해
+flow:
+  trigger: 채점에서 동그라미 대신 빗금 하나
+  thought: '"또 틀렸다"'
+  feel: 얼굴이 뜨거워지고 목이 메임
+  pattern: 틀린 하나를 '나는 못하는 애'로 바꿔 말함
+  break: 문제집을 덮거나 그다음 문제들을 대충 풂
+  residue: 그 과목 앞에서 미리 움츠러듦 → [[잘하던 과목에서 무너진 뒤 피함]]
+causes:
+  - 틀린 이유를 바꿀 수 없는 능력에 둠 → [[귀인]]
+  - 실패한 나를 친구에게는 안 할 말로 다그침 → [[자기 자비]]
+  - 평소 '똑똑하다'는 칭찬이 많았을수록 틀림이 정체성 문제가 됨 → [[능력 칭찬과 과정 칭찬]]
+triggers:
+  - text: 자기 이름을 부르며 '어디가 막혔어?' 묻기
+    when: 자책이 시작될 때
+    time: 10초
+    who: 본인
+    grade: B
+  - text: 틀린 문제 옆에 '아직'이라고 쓰기
+    when: 채점할 때
+    time: 5초
+    who: 본인
+    grade: D
+  - text: 정답 말고 맞게 간 데까지를 먼저 짚어 주기
+    when: 같이 채점할 때
+    time: 30초
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[이름 불러 혼잣말]]'
+    basis: '[[거리 두기 혼잣말]]'
+    grade: B
+    time: 10초
+    age: 초4 이상
+  - method: '[[친구에게 하듯 다시 말하기]]'
+    basis: '[[자기 자비]]'
+    grade: B
+    time: 1분
+    age: 초4 이상
+  - method: '[[확신도 오답 노트]]'
+    basis: '[[오류에서 배우기]]'
+    grade: B
+    time: 문제당 10초
+    age: 초5 이상
+talk:
+  - avoid: 이걸 왜 틀려?
+    instead: 여기까진 맞게 갔네. 어디서 갈렸을까
+  - avoid: 울 일이야?
+    instead: 속상하구나. 잠깐 쉬었다 볼까
+  - avoid: 넌 머리는 좋은데
+    instead: 이 문제 세 번째 다시 봤네
+small:
+  today: 틀린 문제 하나에 '어디까지 맞았는지' 표시
+  week: 자책하는 말이 나올 때 이름 불러 다시 말하기 세 번
+  month: 칭찬할 때 '똑똑하다' 대신 과정을 말하는 걸 엄마가 연습
+recovery:
+  - 틀려도 다음 문제로 넘어감
+  - '"난 바보" 대신 "이 부분이 헷갈려"라고 말함'
+expert:
+  - 실수 하나에 자기를 때리거나 물건을 던질 때
+  - '"없어지고 싶다" 같은 말을 할 때'
+limits: 자기 자비 실험은 대학생 대상. 초등 아이에게 쓰는 말은 현장 관찰로 다듬었음(D).
+leadsTo: [잘하던 과목에서 무너진 뒤 피함]
+related: [완벽하게 못 할 바엔 안 함, 아는 문제인데 시험에서 틀림]
+sources: [weiner-1985, kross-2014, neff-2003, breines-2012, mueller-1998]
+books: [love-yourself, mindset, reasonless-calm]
+history:
+  - date: '2026.10.27'
+    note: 등재

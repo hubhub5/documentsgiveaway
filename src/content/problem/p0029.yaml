@@ -1,0 +1,80 @@
+id: P-0029
+title: 함정 선지에 자꾸 걸림
+category: 읽기
+line: 그럴듯한 선지를 고르고 나서 해설을 보면 '지문에 없는 걸 당연하게 깔고 있었다'는 걸 아는 상황
+ages: [중등, 고등]
+grade: C
+facets:
+  when: [시험 중, 결과 후]
+  where: [교실, 집 책상]
+  with: [혼자]
+  subject: [독해]
+  freq: 매주
+factors:
+  main: 수치심·자책
+  sub: [불안·긴장]
+says:
+  - who: 아이
+    text: 이거 맞는 말이잖아. 왜 틀려?
+  - who: 아이
+    text: 지문엔 없는데 상식적으로 맞잖아
+signals:
+  body: []
+  thought: ['상식적으로 맞잖아', '출제자가 꼬았네']
+  action: [두 개 남기고 감으로 고름, 해설 보고 억울해함]
+scene:
+  - time: 고1 3월 모의고사 국어 비문학, 선지 ④
+    lines:
+      - who: 아이
+        text: 일반적으로 그렇잖아
+flow:
+  trigger: 지문 내용과 상식이 겹치는 선지가 나옴
+  thought: '"이건 당연히 맞지"'
+  feel: 확신, 빨리 넘어가고 싶음
+  pattern: 지문 근거 대신 내가 당연하게 여기는 것으로 판단
+  break: 확신하고 틀림 → '국어는 운'
+  residue: 비슷한 함정에 계속 걸림
+causes:
+  - 지문이 말하지 않은 연결 고리를 내가 채워 넣음 → [[숨은 전제]]
+  - 확신하고 틀린 걸 다시 보지 않음 → [[오류에서 배우기]]
+triggers:
+  - text: 선지마다 '지문 몇째 줄?' 적고 못 적으면 보류
+    when: 선지 고를 때
+    time: 10초
+    who: 본인
+    grade: D
+  - text: 확신하고 틀린 선지만 모아 '내가 깔았던 전제' 한 줄 쓰기
+    when: 채점 후
+    time: 2분
+    who: 본인
+    grade: B
+solutions:
+  - method: '[[숨은 전제 한 줄 쓰기]]'
+    basis: '[[숨은 전제]]'
+    grade: C
+    time: 문장당 1분
+    age: 중1 이상
+  - method: '[[확신도 오답 노트]]'
+    basis: '[[오류에서 배우기]]'
+    grade: B
+    time: 문제당 10초
+    age: 초5 이상
+talk:
+  - avoid: 국어는 많이 읽어야 해
+    instead: 그 선지가 맞으려면 지문에 뭐가 있어야 했을까?
+small:
+  today: 틀린 선지 하나에 '내가 당연하게 여긴 것' 한 줄
+  week: 모든 선지 옆에 지문 줄 번호 적기 연습
+  month: 신문 기사 주장에서 숨은 전제 찾기 네 번
+recovery:
+  - 상식 대신 지문 근거로 고른다고 말함
+  - 확신하고 틀리는 선지가 줄어듦
+expert:
+  - 해당 없음. 다만 시험 불안이 크면 [[시험 중 머리가 하얘짐]] 문서 참고
+limits: 툴민 모델은 분석 틀이지 실험 근거가 아니다. 선지 판단에 대한 직접 연구는 이 사전에 없다(C).
+related: [문단 사이 연결을 놓침, 지문을 다 읽었는데 요지를 모름, 아는 문제인데 시험에서 틀림]
+sources: [toulmin-1958, butterfield-2001]
+books: [rulebook-arguments, reading-brain]
+history:
+  - date: '2026.10.27'
+    note: 등재

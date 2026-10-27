@@ -1,0 +1,21 @@
+id: C-0011
+title: 인지 부하
+en: Cognitive load
+origin: John Sweller(1988)
+field: 교육심리학
+line: 한 번에 머릿속에 붙잡아 둘 수 있는 양에는 한계가 있고, 넘치면 배우지 못한다
+grade: B
+replication: 대체로 확인
+studies:
+  - source: sweller-1988
+    who: 실험·이론
+    result: 목표에서 거꾸로 따라가며 푸는 방식은 부하가 커서 문제는 풀어도 구조는 덜 배움
+examples:
+  - who: 아이
+    text: 설명 듣다가 앞에 거 까먹었어
+sources: [sweller-1988]
+books: [make-it-stick]
+related: [압박 속 수행 저하, 텍스트 구조]
+history:
+  - date: '2026.10.27'
+    note: 등재

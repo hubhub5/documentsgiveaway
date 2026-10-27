@@ -1,0 +1,76 @@
+id: P-0030
+title: 긴 글을 보면 시작 전에 지침
+category: 읽기
+line: 지문 길이를 보는 순간 한숨부터 나오고, 읽기 전에 이미 '못 하겠다'고 정해 버리는 상황
+ages: [초고, 중등, 고등]
+grade: C
+facets:
+  when: [시작 전, 시험 중]
+  where: [집 책상, 교실]
+  with: [혼자]
+  subject: [독해]
+  freq: 거의 매일
+factors:
+  main: 회피
+  sub: [무력감, 과거 경험]
+says:
+  - who: 아이
+    text: 이거 언제 다 읽어
+  - who: 아이
+    text: 긴 글은 나랑 안 맞아
+signals:
+  body: [한숨, 몸을 뒤로 젖힘]
+  thought: ['어차피 이해 못 할 거야']
+  action: [문제부터 보고 찍음, 지문 마지막만 읽음]
+flow:
+  trigger: 한 쪽을 꽉 채운 지문
+  thought: '"이걸 언제 다"'
+  feel: 몸이 처지고 하기 싫어짐
+  pattern: 지문을 건너뛰고 선지만 보고 고름
+  break: 긴 글을 피하는 만큼 읽기 경험이 줄어듦
+  residue: '"긴 글은 못 읽는 사람"이라는 이름표'
+causes:
+  - 긴 글을 한 덩어리로 보면 부담이 커짐 → [[인지 부하]]
+  - 읽어도 남는 게 없던 경험이 쌓임 → [[학습된 무기력]]
+  - 빨리 피하면 당장 편해서 회피가 굳음 → [[미루기와 기분 조절]]
+triggers:
+  - text: 지문을 문단 단위로 접거나 가리고 한 문단씩만 보기
+    when: 시작 전
+    time: 10초
+    who: 본인
+    grade: D
+  - text: 첫 문단만 읽고 한 줄로 말하기
+    when: 시작 전
+    time: 1분
+    who: 본인
+    grade: B
+solutions:
+  - method: '[[읽고 한 줄로 말하기]]'
+    basis: '[[자기 설명]]'
+    grade: B
+    time: 문단당 20초
+    age: 초3 이상
+  - method: '[[2분 시작]]'
+    basis: '[[미루기와 기분 조절]]'
+    grade: D
+    time: 2분
+    age: 전 연령
+talk:
+  - avoid: 책을 좀 읽어야 해
+    instead: 첫 문단만 같이 읽어 볼까
+small:
+  today: 긴 지문 하나를 문단씩 가리며 읽기
+  week: 짧은 칼럼 하나 매일 읽고 한 줄 말하기
+  month: 읽은 지문 길이를 기록해서 늘어난 걸 보기
+recovery:
+  - 긴 지문 앞에서 한숨 대신 문단을 나눔
+  - 지문을 건너뛰고 찍는 일이 줄어듦
+expert:
+  - 읽기 속도나 정확도가 또래보다 눈에 띄게 낮을 때. 읽기 평가 상담
+limits: 긴 글 회피의 직접 연구는 적다. 인지 부하와 회피 연구에서 추론(C).
+related: [지문을 다 읽었는데 요지를 모름, 공부만 하면 졸림]
+sources: [sweller-1988, maier-2016, steel-2007, chi-1994]
+books: [reading-brain]
+history:
+  - date: '2026.10.27'
+    note: 등재

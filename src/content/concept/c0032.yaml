@@ -1,0 +1,24 @@
+id: C-0032
+title: 숨은 전제
+en: Warrant / Unstated assumption
+origin: Stephen Toulmin(1958)
+field: 논증 이론
+line: 근거에서 주장으로 넘어갈 때 말하지 않고 '당연하다'고 깔아 둔 연결 고리
+grade: C
+replication: 엇갈림
+caveat: 논증 분석의 틀이지 실험 결과가 아니다. 독해 문제 풀이에 대한 직접 근거는 따로 없음
+studies:
+  - source: toulmin-1958
+    who: 이론
+    result: 논증을 주장·근거·보증(전제)으로 나눠 보는 틀을 제시
+examples:
+  - who: 엄마
+    text: 선행 안 하면 뒤처진대
+  - who: 아이
+    text: 근데 그게 왜 당연한 거야?
+sources: [toulmin-1958]
+books: [rulebook-arguments]
+related: [텍스트 구조]
+history:
+  - date: '2026.10.27'
+    note: 등재

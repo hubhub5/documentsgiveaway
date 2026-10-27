@@ -1,0 +1,33 @@
+id: C-0001
+title: 인출 연습
+en: Retrieval practice / Testing effect
+origin: 오래된 현상. Roediger·Karpicke(2006)가 재조명
+field: 인지심리학
+line: 다시 보는 것보다 기억에서 꺼내 보는 행동 자체가 기억을 단단하게 만든다
+grade: A
+replication: 반복 확인
+caveat: 꺼낼 때 너무 어려우면 좌절이 커진다. 처음엔 힌트를 허용하는 편이 낫다
+studies:
+  - source: roediger-2006
+    who: 대학생
+    result: 1주 뒤 회상률. 네 번 읽기 40% · 한 번 읽고 세 번 꺼내기 61% (실험 2)
+  - source: karpicke-2011
+    who: 대학생
+    result: 개념도 그리기보다 인출 연습이 1주 뒤 추론 문제까지 더 나았음
+  - source: smith-2016
+    who: 대학생
+    result: 인출 연습으로 배운 내용은 급성 스트레스 뒤에도 회상이 유지됨
+  - source: dunlosky-2013
+    who: 연구 수백 편 종합
+    result: 학습 기법 10가지 중 '연습 시험'을 유용성 높음으로 평가
+examples:
+  - who: 아이
+    text: 읽을 땐 다 아는 것 같았는데 덮으니까 하나도 안 나와
+  - who: 엄마
+    text: 책 덮고 엄마한테 설명해 볼래?
+sources: [roediger-2006, karpicke-2011, smith-2016, dunlosky-2013]
+books: [make-it-stick, metacognition]
+related: [간격 효과, 유창성 착각, 바람직한 어려움]
+history:
+  - date: '2026.10.27'
+    note: 등재

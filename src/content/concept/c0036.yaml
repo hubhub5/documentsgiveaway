@@ -1,0 +1,24 @@
+id: C-0036
+title: 귀인
+en: Attribution theory
+origin: Bernard Weiner(1985)
+field: 동기심리학
+line: 성공과 실패의 원인을 어디에 두는지가 다음 감정과 행동을 바꾼다
+grade: B
+replication: 대체로 확인
+caveat: 원인을 '노력 부족'으로만 돌리는 것도 반복되면 자책으로 바뀔 수 있음
+studies:
+  - source: weiner-1985
+    who: 이론
+    result: 원인이 안정적이고 내 탓일수록 수치심과 포기가 커짐
+examples:
+  - who: 아이
+    text: 난 원래 수학 머리가 없어
+  - who: 엄마
+    text: 이번엔 어떤 방법이 안 맞았을까
+sources: [weiner-1985]
+books: [optimistic-child, mindset]
+related: [학습된 무기력, 능력 칭찬과 과정 칭찬]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,22 @@
+id: M-0019
+title: 친구에게 하듯 다시 말하기
+line: 나에게 한 말을 친구에게 한다면 어떻게 바꿀지 한 문장으로 고쳐 보는 방법
+time: 1분
+tools: 없음
+ages: 초4 이상
+mode: 둘 다
+grade: B
+basis: [자기 자비]
+steps:
+  - 방금 나에게 한 말을 그대로 적거나 떠올린다
+  - 친구가 같은 일로 속상해한다고 생각한다
+  - 그 친구에게 할 말을 한 문장으로 만든다
+  - 그 문장을 나에게 다시 한다
+mistakes:
+  - '"괜찮아, 잘했어"처럼 사실과 다른 위로를 한다'
+  - 고친 문장 다음에 바로 '근데'를 붙인다
+sources: [neff-2003, breines-2012]
+books: [love-yourself, reasonless-calm]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,24 @@
+id: C-0013
+title: 실행 의도
+en: Implementation intentions
+origin: Peter Gollwitzer(1999)
+field: 동기심리학
+line: '"만약 ○○하면, 그때 △△한다"처럼 상황과 행동을 미리 묶어 두는 계획'
+grade: A
+replication: 반복 확인
+studies:
+  - source: gollwitzer-1999
+    who: 연구 종합
+    result: 목표만 세운 것보다 언제·어디서를 정한 계획이 실행률을 높임
+  - source: gollwitzer-2006
+    who: 연구 94편 종합
+    result: 효과 크기 중간에서 큼(d=0.65)
+examples:
+  - who: 아이
+    text: 저녁 먹고 그릇 넣으면 바로 수학 펴기
+sources: [gollwitzer-1999, gollwitzer-2006]
+books: [atomic-habits]
+related: [심리적 대조, 계획 오류]
+history:
+  - date: '2026.10.27'
+    note: 등재

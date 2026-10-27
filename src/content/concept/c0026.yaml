@@ -1,0 +1,25 @@
+id: C-0026
+title: 자기 자비
+en: Self-compassion
+origin: Kristin Neff(2003)
+field: 성격·임상심리학
+line: 실패했을 때 나를 친구 대하듯 대하고, 누구나 겪는 일로 보고, 감정을 과장 없이 알아차리는 태도
+grade: B
+replication: 대체로 확인
+caveat: 봐주기나 자기 합리화와 다르다. 실험에서는 오히려 다시 노력하는 시간이 늘었음
+studies:
+  - source: neff-2003
+    who: 이론·척도 개발
+    result: 자기 친절, 보편적 인간성, 마음챙김의 세 요소로 정의
+  - source: breines-2012
+    who: 대학생
+    result: 시험 실패 뒤 자기 자비를 유도한 집단이 재시험 공부를 더 오래 함
+examples:
+  - who: 아이
+    text: 친구가 이렇게 틀렸으면 뭐라고 해 줄 거야?
+sources: [neff-2003, breines-2012]
+books: [love-yourself, reasonless-calm]
+related: [완벽주의, 거리 두기 혼잣말]
+history:
+  - date: '2026.10.27'
+    note: 등재

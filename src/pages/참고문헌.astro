@@ -1,0 +1,30 @@
+---
+import '../styles/doc.css';
+import Base from '../layouts/Base.astro';
+import { registry, sourceUrl } from '../lib/docs';
+const reg = await registry();
+const list = [...reg.sources.values()].sort((a, b) => a.authors.localeCompare(b.authors) || a.year - b.year);
+const types = [...new Set(list.map((s) => s.type))];
+---
+<Base title="참고문헌" current="참고문헌" description="이 사전이 인용한 연구 전체 목록. 모두 DOI로 확인했습니다.">
+  <div class="wrap page" style="max-width:900px">
+    <div class="page-head">
+      <p class="kicker mono">REFERENCES · {list.length}</p>
+      <h1>참고문헌</h1>
+      <p>인용한 연구 전체. 서지 정보는 Crossref에 등록된 DOI 메타데이터와 대조해 확인했습니다.</p>
+    </div>
+    <p class="mono mute" style="margin-bottom:12px">{types.map((t) => `${t} ${list.filter((s) => s.type === t).length}`).join(' · ')}</p>
+    <ol class="refs">
+      {list.map((s, i) => (
+        <li>
+          <span class="mono">{String(i + 1).padStart(2, '0')}</span>
+          <div>
+            {s.authors} ({s.year}). <a class="t" href={sourceUrl(s.id)}>{s.title}</a>. <em>{s.venue}</em>{s.volume && `, ${s.volume}`}{s.pages && `, ${s.pages}`}.
+            {s.doi && <> <a class="mono" href={`https://doi.org/${s.doi}`} target="_blank" rel="noopener">doi:{s.doi}</a></>}
+            <div class="k">{s.type} — {s.note} · 인용 {reg.citedBy.get(s.id)?.length ?? 0}</div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>

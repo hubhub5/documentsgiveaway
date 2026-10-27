@@ -1,0 +1,22 @@
+id: C-0044
+title: 휴대폰의 존재 효과
+en: Brain drain effect
+origin: Ward 외(2017)
+field: 소비자·인지심리학
+line: 휴대폰이 꺼져 있어도 눈에 보이는 곳에 있으면 집중력 일부가 거기 묶인다는 주장
+grade: C
+replication: 엇갈림
+caveat: 이후 재현 시도에서 결과가 엇갈렸음. 다른 방에 두는 비용이 적어 실천은 무난함
+studies:
+  - source: ward-2017
+    who: 대학생
+    result: 휴대폰이 책상 위에 있을 때 작업기억 과제 점수가 다른 방에 둘 때보다 낮았음
+examples:
+  - who: 아이
+    text: 안 보잖아. 뒤집어 놨어
+sources: [ward-2017]
+books: [stolen-focus]
+related: [지루함]
+history:
+  - date: '2026.10.27'
+    note: 등재

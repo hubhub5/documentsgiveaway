@@ -1,0 +1,22 @@
+id: M-0021
+title: 읽고 한 줄로 말하기
+line: 한 문단을 읽을 때마다 책을 덮고 '그러니까 이 말이지'를 소리 내어 한 줄로 말하는 방법
+time: 문단당 20초
+tools: 없음
+ages: 초3 이상
+mode: 둘 다
+grade: B
+basis: [자기 설명, 상황 모델]
+steps:
+  - 한 문단을 읽는다
+  - 손으로 문단을 가린다
+  - '"그러니까…"로 시작해 한 줄로 말한다'
+  - 막히면 그 문단만 다시 읽는다
+mistakes:
+  - 문장을 그대로 외워서 말한다
+  - 엄마가 바로 정답 요약을 말해 준다
+sources: [chi-1994]
+books: [reading-brain, metacognition]
+history:
+  - date: '2026.10.27'
+    note: 등재

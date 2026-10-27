@@ -1,0 +1,75 @@
+id: P-0011
+title: 계획 세우는 데만 시간을 씀
+category: 시작·지속
+line: 플래너 꾸미기, 색깔 나누기, 시간표 다시 짜기에 공부할 시간을 쓰는 상황
+ages: [중등, 고등]
+grade: C
+facets:
+  when: [시작 전]
+  where: [집 책상, 독서실]
+  with: [혼자]
+  subject: [전 과목]
+  freq: 매주
+factors:
+  main: 회피
+  sub: [완벽주의, 불안·긴장]
+says:
+  - who: 아이
+    text: 계획부터 제대로 세워야 돼
+  - who: 엄마
+    text: 또 플래너 사?
+signals:
+  body: [계획 짤 땐 편안함]
+  thought: ['이번엔 완벽하게', '이 계획이면 될 것 같아']
+  action: [형광펜 색 고르기, 시간표를 30분 단위로 쪼갬]
+flow:
+  trigger: 지난 계획이 무너진 직후
+  thought: '"계획이 별로라서 그랬어"'
+  feel: 새 계획을 짤 때 잠깐 기분이 좋아짐
+  pattern: 공부 시작 대신 계획을 정교하게 다듬음
+  break: 계획을 다 짜고 나면 이미 지쳐 오늘은 시작 안 함
+  residue: 계획표는 늘고 공부량은 그대로
+causes:
+  - 계획 세우기는 '하는 느낌'을 주면서 실제 과제의 불편함은 피하게 해 줌 → [[미루기와 기분 조절]]
+  - 완벽한 계획이어야 시작할 수 있다는 믿음 → [[완벽주의]]
+triggers:
+  - text: 계획은 5분 타이머 안에서만 짜기
+    when: 계획 시작
+    time: 5분
+    who: 본인
+    grade: D
+  - text: 계획표 첫 칸을 바로 지금 2분 하기
+    when: 계획 직후
+    time: 2분
+    who: 본인
+    grade: D
+solutions:
+  - method: '[[WOOP 네 칸]]'
+    basis: '[[심리적 대조]]'
+    grade: B
+    time: 5분
+    age: 중1 이상
+  - method: '[[2분 시작]]'
+    basis: '[[미루기와 기분 조절]]'
+    grade: D
+    time: 2분
+    age: 전 연령
+talk:
+  - avoid: 계획 짤 시간에 공부를 해
+    instead: 계획 첫 칸만 지금 같이 해 볼까
+small:
+  today: 계획은 종이 한 장에 세 줄로만
+  week: 계획 시간 5분 제한 다섯 번 지키기
+  month: 플래너 대신 하루 한 줄 기록으로 바꿔 보기
+recovery:
+  - 계획표가 단순해짐
+  - 계획 다 짜고 바로 첫 칸을 시작함
+expert:
+  - 정리, 확인 행동을 멈추지 못해 괴로워할 때
+limits: 계획 세우기를 회피로 보는 직접 연구는 없다. 미루기 연구에서 추론(C).
+related: [매번 계획보다 늦어지다 포기함, 완벽하게 못 할 바엔 안 함]
+sources: [steel-2007, sirois-2013, curran-2019, duckworth-2011]
+books: [atomic-habits]
+history:
+  - date: '2026.10.27'
+    note: 등재

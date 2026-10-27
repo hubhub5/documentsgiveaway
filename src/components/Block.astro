@@ -1,0 +1,12 @@
+---
+import type { Doc, Registry } from '../lib/docs';
+import { linkCount } from '../lib/docs';
+interface Props { doc: Doc; reg: Registry }
+const { doc, reg } = Astro.props;
+const sub = doc.data.line ?? doc.data.claim ?? '';
+---
+<a class="block" href={doc.url} data-id={doc.id}>
+  <span class="mono"><span>{doc.id}</span><span>{doc.ns} · 연결 {linkCount(doc, reg)}</span></span>
+  <h3>{doc.title}</h3>
+  {sub && <p>{sub.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_: string, a: string, b?: string) => b ?? a)}</p>}
+</a>

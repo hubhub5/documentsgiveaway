@@ -1,0 +1,92 @@
+id: P-0023
+title: 부모를 실망시킬까 두려움
+category: 관계
+line: 점수 자체보다 그 점수를 본 엄마 얼굴이 먼저 떠올라 공부가 무거워지는 상황
+ages: [초고, 중등, 고등]
+grade: C
+facets:
+  when: [결과 후, 시험 직전, 공부 중]
+  where: [집 책상, 거실]
+  with: [엄마 옆]
+  subject: [전 과목]
+  freq: 매주
+factors:
+  main: 부담·기대
+  sub: [불안·긴장, 수치심·자책]
+says:
+  - who: 아이
+    text: 엄마 실망할까 봐 말 못 했어
+  - who: 아이
+    text: 나 때문에 학원비 아깝지
+  - who: 엄마
+    text: 엄마는 점수 신경 안 써
+signals:
+  body: [점수 얘기 나오면 몸이 굳음]
+  thought: ['엄마가 또 한숨 쉬겠지', '돈 들인 만큼 해야 하는데']
+  action: [성적표를 늦게 보여 줌, 엄마 표정을 살핌]
+scene:
+  - time: 성적표 나온 날 저녁, 거실
+    lines:
+      - who: 엄마
+        text: 괜찮아. 다음에 잘하면 돼
+      - who: 아이
+        text: (방으로 들어가며) 응
+flow:
+  trigger: 시험이나 성적 이야기가 다가옴
+  thought: '"엄마가 실망하면 어떡하지"'
+  feel: 배가 묵직하고 숨이 짧아짐
+  pattern: 공부할 때도 점수보다 엄마 반응을 계산함
+  break: 결과를 숨기거나 거짓말을 함
+  residue: 들킬까 봐 더 불안해지고 공부가 더 무거워짐
+causes:
+  - 사랑과 실망이 점수에 연결되어 있다고 느낌 → [[심리적 통제]]
+  - 말로는 괜찮다는데 표정은 다르다는 걸 아이가 읽음
+  - 스스로 정한 이유가 없어 부모 기대가 유일한 동력 → [[자기결정성 이론]]
+triggers:
+  - text: 점수 말하기 전에 '어떤 결과든 말해 줘서 고마워' 먼저
+    when: 성적 이야기
+    time: 10초
+    who: 엄마
+    grade: D
+  - text: 엄마 반응을 예상하는 생각이 나면 종이에 한 줄 쓰기
+    when: 공부 중
+    time: 1분
+    who: 본인
+    grade: C
+  - text: 엄마가 자기 실망을 혼자 먼저 정리하고 대화
+    when: 성적 본 직후
+    time: 10분
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[선택지 두 개 주기]]'
+    basis: '[[자율성 지지 양육]]'
+    grade: B
+    time: 10초
+    age: 전 연령
+  - method: '[[시험 전 걱정 쓰기]]'
+    basis: '[[표현적 글쓰기]]'
+    grade: B
+    time: 10분
+    age: 중1 이상
+talk:
+  - avoid: 엄마가 너한테 얼마나 들였는데
+    instead: 공부는 너 거야. 엄마는 옆에 있을게
+  - avoid: (한숨) 괜찮아
+    instead: 엄마도 좀 아쉬워. 근데 그건 엄마 몫이야
+small:
+  today: 오늘 점수 말고 하루 얘기 하나 묻기
+  week: 학원비, 기대 같은 말을 아이 앞에서 안 하기
+  month: 아이가 스스로 정한 목표 하나를 엄마가 그대로 따라 주기
+recovery:
+  - 낮은 점수도 먼저 말해 줌
+  - '"엄마 실망" 말고 "내가 아쉬워"라고 말함'
+expert:
+  - 결과 때문에 집에 들어오기 싫어하거나 거짓말이 잦아질 때
+limits: 부모 기대와 아이 불안의 관계는 상관 연구가 대부분(C).
+related: [엄마가 옆에 있으면 더 못함, 성적표 앞에서 표정 관리가 안 됨]
+sources: [barber-1996, ryan-2000, grolnick-1989, ramirez-2011]
+books: [between-parent-child, emotion-coaching]
+history:
+  - date: '2026.10.27'
+    note: 등재

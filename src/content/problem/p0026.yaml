@@ -1,0 +1,72 @@
+id: P-0026
+title: 형제와 비교당함
+category: 관계
+line: 형이나 동생과 성적·습관을 비교하는 말을 들은 뒤 그 과목이나 공부 자체를 거부하는 상황
+ages: [초고, 중등, 고등]
+grade: C
+facets:
+  when: [결과 후]
+  where: [거실]
+  with: [엄마 옆]
+  subject: [전 과목]
+  freq: 가끔
+factors:
+  main: 비교·조바심
+  sub: [수치심·자책, 부담·기대]
+says:
+  - who: 엄마
+    text: 언니는 이맘때 혼자 했는데
+  - who: 아이
+    text: 그럼 언니만 키우지
+signals:
+  body: [얼굴이 굳음]
+  thought: ['어차피 나는 언니만큼 못해']
+  action: [방문을 닫음, 형제와 같은 과목을 거부]
+flow:
+  trigger: 형제와 비교하는 한마디
+  thought: '"나는 언니보다 못한 애"'
+  feel: 화와 서러움이 같이 올라옴
+  pattern: 비교된 영역에서 아예 손을 뗌
+  break: '"안 하는 거지 못하는 게 아니야"라고 버팀'
+  residue: 형제 관계까지 날카로워짐
+causes:
+  - 가장 가까운 비교 대상이 매일 같은 집에 있음 → [[사회 비교]]
+  - 비교에서 지면 노력을 줄여 능력을 지키려 함 → [[자기 불구화]]
+triggers:
+  - text: 비교한 말을 그날 안에 짧게 되돌리기
+    when: 비교한 날
+    time: 1분
+    who: 엄마
+    grade: D
+  - text: 형제와 다른 시간, 다른 자리에서 공부하게 하기
+    when: 공부 시간
+    time: 바로
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[선택지 두 개 주기]]'
+    basis: '[[자율성 지지 양육]]'
+    grade: B
+    time: 10초
+    age: 전 연령
+talk:
+  - avoid: 언니는 이맘때 혼자 했어
+    instead: 너는 너 속도로 가면 돼
+  - avoid: 동생도 하는데
+    instead: 아까 그 말은 엄마가 잘못했어
+small:
+  today: 비교하는 말이 나오면 '아까 그 말 취소' 하기
+  week: 형제 이야기 없이 이 아이 얘기만 하는 시간 10분
+  month: 형제의 성적표를 서로 보이지 않게 하기
+recovery:
+  - 형제 이야기에 덜 날카롭게 반응함
+  - 비교되던 과목을 다시 시작함
+expert:
+  - 형제간 폭력이나 심한 적대감이 생길 때
+limits: 형제 비교의 학업 영향 연구는 이 사전에 아직 출처로 넣지 못했다. 사회 비교 연구로 대신함(C).
+related: [친구 진도에 조바심이 남, 다른 집 아이와 비교하게 됨]
+sources: [festinger-1954, berglas-1978]
+books: [between-parent-child, emotion-coaching]
+history:
+  - date: '2026.10.27'
+    note: 등재

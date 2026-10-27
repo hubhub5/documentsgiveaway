@@ -1,0 +1,24 @@
+id: C-0029
+title: 수면과 기억
+en: Sleep-dependent memory consolidation
+origin: 여러 연구
+field: 신경과학
+line: 낮에 배운 것은 자는 동안 다시 정리되어 단단해진다
+grade: A
+replication: 반복 확인
+studies:
+  - source: diekelmann-2010
+    who: 연구 종합
+    result: 수면 중 기억이 재활성화되며 장기 기억으로 공고화됨
+  - source: gillenoneel-2013
+    who: 미국 고등학생
+    result: 잠을 줄이고 공부한 다음 날 수업 이해와 시험 관련 문제가 오히려 늘어남
+examples:
+  - who: 아이
+    text: 오늘 밤새면 다 외울 수 있어
+sources: [diekelmann-2010, gillenoneel-2013]
+books: [why-we-sleep]
+related: [망각 곡선]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,109 @@
+id: P-0008
+title: 시험 중 머리가 하얘짐
+category: 기억·인출
+line: 시험지를 받자마자 아무것도 떠오르지 않고, 시간이 흐르는 소리만 들리는 상황
+ages: [초고, 중등, 고등]
+grade: B
+facets:
+  when: [시험 중, 시험 직전]
+  where: [교실]
+  with: [선생님 앞]
+  subject: [전 과목]
+  freq: 가끔
+factors:
+  main: 불안·긴장
+  sub: [신체 각성, 과거 경험]
+says:
+  - who: 아이
+    text: 시험지 받으니까 머리가 그냥 하얘졌어
+  - who: 아이
+    text: 나오자마자 다 생각나는 거 있지
+signals:
+  body: [심장이 쿵쾅거림, 손이 떨림, 귀가 먹먹함]
+  thought: ['아무것도 모르겠다', '망했다']
+  action: [첫 문제를 여러 번 읽음, 펜을 쥐고 멈춤]
+scene:
+  - time: 기말 첫날 1교시, 수학. 시험지 배부 직후
+    lines:
+      - who: 아이
+        text: (속으로) 1번부터 모르겠어
+  - time: 시험 끝나고 복도
+    lines:
+      - who: 아이
+        text: 아 그거 근의 공식이었잖아
+flow:
+  trigger: 시험지를 넘기는 순간 첫 문제가 낯설게 보임
+  thought: '"하나도 모르겠다"'
+  feel: 심장이 뛰고 손끝이 차가워짐
+  pattern: 첫 문제를 반복해서 읽으며 시간을 흘려보냄
+  break: 시간 확인 → 더 큰 공포 → 다음 문제도 안 읽힘
+  residue: 시험 끝나고 생각나서 더 큰 자책 → [[틀리면 바로 자책함]]
+causes:
+  - 급한 스트레스가 인출 과정을 막음 → [[스트레스와 기억 인출]]
+  - 걱정이 작업 공간을 차지함 → [[시험 불안]]
+  - 예전에 망친 시험의 기억이 몸에서 먼저 반응함
+triggers:
+  - text: 첫 문제 말고 제일 쉬워 보이는 문제부터 풀기
+    when: 시험지 받은 직후
+    time: 10초
+    who: 본인
+    grade: D
+  - text: 날숨 길게 세 번
+    when: 머리가 하얘질 때
+    time: 30초
+    who: 본인
+    grade: C
+  - text: 발바닥이 바닥에 닿은 느낌에 5초 주의 두기
+    when: 손이 떨릴 때
+    time: 5초
+    who: 본인
+    grade: D
+  - text: 시험 전 10분, 걱정을 종이에 쏟아내기
+    when: 시험 직전
+    time: 10분
+    who: 본인
+    grade: B
+solutions:
+  - method: '[[시험 전 걱정 쓰기]]'
+    basis: '[[표현적 글쓰기]]'
+    grade: B
+    time: 10분
+    age: 중1 이상
+  - method: '[[날숨 길게 쉬기]]'
+    basis: '[[느린 호흡]]'
+    grade: C
+    time: 30초
+    age: 전 연령
+  - method: '[[백지 인출]]'
+    basis: '[[스트레스와 기억 인출]]'
+    grade: B
+    time: 10분
+    age: 초4 이상
+  - method: '[[긴장 다시 읽기]]'
+    basis: '[[각성 재평가]]'
+    grade: B
+    time: 10초
+    age: 중1 이상
+talk:
+  - avoid: 긴장하지 마
+    instead: 긴장되는 건 몸이 준비하는 거래
+  - avoid: 시험 끝나고 생각나면 무슨 소용이야
+    instead: 나오자마자 생각났다는 건 알고 있었다는 거야
+small:
+  today: 쉬운 문제부터 푸는 순서를 미리 정해 두기
+  week: 집에서 시간 재고 모의 시험 한 번, 시작 1분은 숨 고르기
+  month: 시험 전 루틴(걱정 쓰기, 날숨, 쉬운 문제부터)을 세 번 반복해 익히기
+recovery:
+  - 하얘져도 몇 분 뒤 다시 풀기 시작했다고 말함
+  - 시험 후 '하얘졌다'보다 '어디서부터 풀렸다'를 말함
+expert:
+  - 숨이 안 쉬어지거나 쓰러질 것 같은 공황 증상이 있을 때
+  - 시험이 있는 날마다 등교를 거부할 때
+limits: 스트레스와 인출의 원 연구는 동물 실험. 사람 대상 연구는 대학생 위주.
+leadsTo: [틀리면 바로 자책함]
+related: [외운 것이 떠오르지 않음, 시험 전날 잠들지 못함, 숨을 참고 어깨가 굳음]
+sources: [dequervain-1998, smith-2016, hembree-1988, ramirez-2011, zaccaro-2018, jamieson-2010]
+books: [unknown, reasonless-calm, body-keeps-score]
+history:
+  - date: '2026.10.27'
+    note: 등재

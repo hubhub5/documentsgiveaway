@@ -1,0 +1,27 @@
+id: C-0010
+title: 각성 재평가
+en: Arousal reappraisal
+origin: Jamieson 외(2010), Brooks(2014)
+field: 사회심리학
+line: 두근거림을 '망칠 신호'가 아니라 '준비하는 신호'로 다시 해석하는 것
+grade: B
+replication: 대체로 확인
+caveat: 진정하려고 애쓰는 것보다 쉬움. 다만 긴장이 너무 큰 경우엔 몸을 먼저 낮추는 게 낫다
+studies:
+  - source: jamieson-2010
+    who: 대학생 GRE 응시 준비생
+    result: 긴장이 수행을 돕는다는 설명을 들은 집단의 수학 점수가 높았음
+  - source: brooks-2014
+    who: 성인
+    result: '"진정하자"보다 "설렌다"고 말한 쪽이 노래·발표·수학 수행이 나았음'
+examples:
+  - who: 아이
+    text: 심장 뛰는 거 보니까 나 망하려나 봐
+  - who: 엄마
+    text: 몸이 준비하는 거야. 뛰어도 괜찮아
+sources: [jamieson-2010, brooks-2014]
+books: [how-emotions, unknown]
+related: [시험 불안, 느린 호흡]
+history:
+  - date: '2026.10.27'
+    note: 등재

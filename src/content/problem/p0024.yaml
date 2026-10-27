@@ -1,0 +1,87 @@
+id: P-0024
+title: 엄마가 옆에 있으면 더 못함
+category: 관계
+line: 엄마가 옆에서 봐 주면 아는 것도 틀리고, 결국 둘 다 언성이 높아지는 상황
+ages: [초저, 초고, 중등]
+grade: B
+facets:
+  when: [공부 중]
+  where: [거실, 집 책상]
+  with: [엄마 옆]
+  subject: [수리, 전 과목]
+  freq: 거의 매일
+factors:
+  main: 불안·긴장
+  sub: [부담·기대]
+says:
+  - who: 아이
+    text: 엄마가 보고 있으면 생각이 안 나
+  - who: 엄마
+    text: 이거 아까 했잖아
+  - who: 아이
+    text: 그냥 나 혼자 할래
+signals:
+  body: [어깨가 움츠러듦, 손이 멈춤]
+  thought: ['또 틀리면 혼나', '엄마 표정 봐야지']
+  action: [엄마 얼굴을 자주 봄, 답을 말하고 반응을 기다림]
+scene:
+  - time: 평일 저녁 8시, 거실 식탁. 수학 익힘책
+    lines:
+      - who: 엄마
+        text: 여기 다시 봐
+      - who: 아이
+        text: (지우개만 문지름)
+flow:
+  trigger: 엄마가 옆에 앉아 문제를 봄
+  thought: '"틀리면 안 돼"'
+  feel: 몸이 굳고 머리가 비는 느낌
+  pattern: 풀이 대신 엄마 반응을 살피며 답을 찍음
+  break: 엄마 목소리가 커지고 아이는 울거나 문을 닫음
+  residue: 숙제 시간이 싸움 시간이 됨
+causes:
+  - 누가 보고 있으면 익숙한 건 쉬워지고 낯선 건 더 어려워짐 → [[사회적 촉진]]
+  - 엄마의 긴장이 아이에게 옮겨 감 → [[부모 불안의 전이]]
+  - 통제하는 방식의 숙제 도움은 결과가 좋지 않을 수 있음 → [[자율성 지지 양육]]
+triggers:
+  - text: 옆이 아니라 같은 공간 다른 자리에서 엄마 할 일 하기
+    when: 숙제 시간
+    time: 바로
+    who: 엄마
+    grade: B
+  - text: 다 풀고 나서 부를 때만 보기
+    when: 숙제 시간
+    time: 바로
+    who: 엄마
+    grade: D
+  - text: 틀린 걸 가리키기 전에 숨 한 번 내쉬기
+    when: 채점할 때
+    time: 5초
+    who: 엄마
+    grade: C
+solutions:
+  - method: '[[선택지 두 개 주기]]'
+    basis: '[[자율성 지지 양육]]'
+    grade: B
+    time: 10초
+    age: 전 연령
+talk:
+  - avoid: 이거 아까 했잖아. 왜 또 틀려
+    instead: 다 하면 불러. 그때 같이 보자
+  - avoid: 엄마가 몇 번을 말해
+    instead: 오늘은 여기까지만 하고 내일 다시 보자
+small:
+  today: 숙제 시간에 엄마는 같은 방 다른 자리에 앉기
+  week: 다 풀고 부를 때만 봐 주는 규칙 다섯 번 지키기
+  month: 채점은 아이가 먼저 하고 엄마는 질문만 하기
+recovery:
+  - 아이가 먼저 '이거 봐 줘'라고 부름
+  - 숙제 시간에 언성이 높아지는 날이 줄어듦
+expert:
+  - 숙제 때마다 신체적 처벌이나 심한 말이 오갈 때. 가족 상담
+limits: 사회적 촉진은 오래된 연구. 엄마-아이 숙제 상황 직접 연구는 적다.
+related: [부모를 실망시킬까 두려움, 아이보다 내가 더 불안함, 잔소리가 멈추지 않음]
+sources: [zajonc-1965, maloney-2015, patall-2008, grolnick-1989]
+books: [between-parent-child, emotion-coaching]
+history:
+  - date: '2026.10.27'
+    note: 등재

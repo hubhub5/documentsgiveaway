@@ -1,0 +1,22 @@
+id: C-0027
+title: 느린 호흡
+en: Slow breathing
+origin: 여러 전통과 생리학 연구
+field: 정신생리학
+line: 분당 10회 이하로 천천히 쉬는 호흡. 심박 변이도와 안정감이 높아지는 쪽으로 몸이 움직임
+grade: C
+replication: 대체로 확인
+caveat: 공부 성적에 대한 직접 근거는 적다. 긴장 낮추기의 근거로만 씀
+studies:
+  - source: zaccaro-2018
+    who: 연구 종합
+    result: 느린 호흡이 부교감 활동, 편안함, 불안 감소와 관련
+examples:
+  - who: 엄마
+    text: 내쉬는 걸 길게 해 봐. 넷 셀 동안
+sources: [zaccaro-2018]
+books: [reasonless-calm, body-keeps-score]
+related: [이완 훈련, 각성 재평가]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,20 @@
+---
+import Base from './Base.astro';
+interface Props { title: string; code: string; description: string; current?: string; updated?: string }
+const { title, code, description, current, updated = '2026.10.27' } = Astro.props;
+---
+<Base title={title} description={description} current={current}>
+  <div class="wrap page info-page">
+    <div class="page-head"><p class="kicker mono">{code} · 개정 {updated}</p><h1>{title}</h1><p>{description}</p></div>
+    <div class="info-body"><slot /></div>
+  </div>
+</Base>
+<style is:global>
+  .info-page { max-width: 820px; }
+  .info-body h2 { font-size: 16px; margin: 36px 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); }
+  .info-body p { margin: 8px 0; color: var(--ink-2); }
+  .info-body ul { margin: 8px 0; }
+  .info-body li { padding: 6px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+  .info-body li::before { content: '—'; color: var(--mute); margin-right: 8px; }
+  .info-body table { margin: 8px 0; }
+</style>

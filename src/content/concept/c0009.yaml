@@ -1,0 +1,25 @@
+id: C-0009
+title: 표현적 글쓰기
+en: Expressive writing
+origin: James Pennebaker(1986 이후)
+field: 건강심리학
+line: 감정과 걱정을 정해진 시간 동안 글로 쏟아내는 것
+grade: B
+replication: 대체로 확인
+caveat: 효과 크기는 연구마다 다르다. 시험 직전 걱정 쓰기는 불안이 높은 학생에게서 효과가 컸음
+studies:
+  - source: pennebaker-1997
+    who: 연구 종합
+    result: 감정 경험을 글로 쓰면 건강과 적응 지표가 나아짐
+  - source: ramirez-2011
+    who: 미국 9학년 학생
+    result: 기말시험 직전 10분 걱정 쓰기 후 성적이 오름. 불안 높은 학생에게서 뚜렷
+examples:
+  - who: 아이
+    text: 그냥 쓰기만 하면 돼? 아무도 안 봐?
+sources: [pennebaker-1997, ramirez-2011]
+books: [reasonless-calm]
+related: [시험 불안, 압박 속 수행 저하]
+history:
+  - date: '2026.10.27'
+    note: 등재

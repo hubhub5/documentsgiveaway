@@ -1,0 +1,21 @@
+id: C-0041
+title: 거리 두기 혼잣말
+en: Distanced self-talk
+origin: Kross 외(2014)
+field: 사회심리학
+line: '"나" 대신 내 이름이나 "너"로 스스로에게 말하면 감정에서 한 발 떨어진다'
+grade: B
+replication: 대체로 확인
+studies:
+  - source: kross-2014
+    who: 대학생
+    result: 이름으로 혼잣말한 집단이 발표 스트레스 상황에서 불안이 덜하고 수행이 나았음
+examples:
+  - who: 아이
+    text: 지민아, 너 이거 저번에 풀었잖아
+sources: [kross-2014]
+books: [reasonless-calm]
+related: [자기 자비, 각성 재평가]
+history:
+  - date: '2026.10.27'
+    note: 등재

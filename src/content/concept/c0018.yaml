@@ -1,0 +1,25 @@
+id: C-0018
+title: 자율성 지지 양육
+en: Autonomy-supportive parenting
+origin: Grolnick·Ryan(1989)
+field: 발달·교육심리학
+line: 아이의 관점을 인정하고 선택지를 주며, 이유를 설명하는 방식의 관여
+grade: B
+replication: 대체로 확인
+caveat: 방치가 아니다. 규칙과 구조는 그대로 두고 방식을 바꾸는 것
+studies:
+  - source: grolnick-1989
+    who: 초등 3–6학년 아이와 부모
+    result: 자율성을 지지하는 부모의 아이가 자기조절과 학교 적응이 나았음
+  - source: patall-2008
+    who: 연구 종합
+    result: 숙제 개입의 효과는 방식과 학년에 따라 달랐음
+examples:
+  - who: 엄마
+    text: 수학 먼저 할래, 영어 먼저 할래?
+sources: [grolnick-1989, patall-2008]
+books: [between-parent-child, emotion-coaching]
+related: [자기결정성 이론, 심리적 통제]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,87 @@
+id: P-0006
+title: 어제 외운 것을 오늘 다 잊음
+category: 기억·인출
+line: 어제 밤 늦게까지 외운 게 오늘 아침 거의 남아 있지 않아 '나는 기억력이 나쁘다'고 결론 내리는 상황
+ages: [초고, 중등, 고등]
+grade: A
+facets:
+  when: [공부 중, 시작 전]
+  where: [집 책상]
+  with: [혼자]
+  subject: [암기]
+  freq: 매주
+factors:
+  main: 무력감
+  sub: [수치심·자책]
+says:
+  - who: 아이
+    text: 어제 분명히 다 외웠는데 다 까먹었어
+  - who: 아이
+    text: 나 기억력 진짜 안 좋아
+signals:
+  body: [아침에 무기력, 한숨]
+  thought: ['해도 소용없어', '어제 시간 버렸다']
+  action: [같은 범위를 처음부터 다시 외움, 단어장 첫 쪽만 너덜너덜]
+flow:
+  trigger: 아침에 단어 시험 보듯 떠올려 보니 반도 안 나옴
+  thought: '"어제 두 시간 한 게 날아갔네"'
+  feel: 힘이 쭉 빠지고 하기 싫어짐
+  pattern: 처음부터 다시 외우거나 아예 미룸
+  break: '"어차피 까먹을 거" 하고 외우기 자체를 멈춤'
+  residue: 기억력 탓으로 굳어짐 → [[성적이 나온 뒤 며칠 무기력함]]
+causes:
+  - 잊는 건 정상. 하루 뒤 큰 폭으로 줄어드는 게 원래 기억의 모양 → [[망각 곡선]]
+  - 한 번에 몰아 외워서 간격이 없었음 → [[간격 효과]]
+  - 늦게 자서 정리될 시간이 짧았음 → [[수면과 기억]]
+triggers:
+  - text: 잊은 걸 다시 외우기 전에 '남은 것'부터 세어 보기
+    when: 아침 확인할 때
+    time: 1분
+    who: 본인
+    grade: D
+  - text: 오늘 다시 꺼낸 건 어제보다 오래 간다고 기억해 두기
+    when: 다시 외울 때
+    time: 10초
+    who: 본인
+    grade: A
+  - text: '"잊는 게 정상이래" 하고 망각 곡선 그림 보여 주기'
+    when: 기억력 탓을 할 때
+    time: 1분
+    who: 엄마
+    grade: A
+solutions:
+  - method: '[[간격 두고 다시 꺼내기]]'
+    basis: '[[간격 효과]]'
+    grade: A
+    time: 하루 5분
+    age: 초4 이상
+  - method: '[[백지 인출]]'
+    basis: '[[인출 연습]]'
+    grade: A
+    time: 10분
+    age: 초4 이상
+  - method: '[[왜 질문 붙이기]]'
+    basis: '[[정교화 질문]]'
+    grade: B
+    time: 항목당 30초
+    age: 초5 이상
+talk:
+  - avoid: 어제 한 거 다 어디 갔어?
+    instead: 그래도 몇 개는 남았네. 뭐가 남았어?
+small:
+  today: 어제 외운 것 중 남은 개수를 세고 숫자만 적기
+  week: 같은 단어를 1일·3일 간격으로 꺼내 보고 남은 개수 비교
+  month: 밤 11시 이후 새로 외우는 날을 줄이기
+recovery:
+  - '"다 까먹었어" 대신 "반은 남았어"라고 말함'
+  - 두 번째 꺼낼 때 남는 양이 늘어난 걸 스스로 알아챔
+expert:
+  - 일상 대화나 약속까지 자주 잊어 생활에 지장이 클 때
+limits: 망각 곡선의 구체적 비율은 재료와 사람마다 다르다. 이 문서는 모양만 근거로 씀.
+leadsTo: [성적이 나온 뒤 며칠 무기력함]
+related: [외운 것이 떠오르지 않음, 시험 전날 잠들지 못함]
+sources: [murre-2015, cepeda-2006, diekelmann-2010]
+books: [make-it-stick, why-we-sleep]
+history:
+  - date: '2026.10.27'
+    note: 등재

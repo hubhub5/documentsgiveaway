@@ -1,0 +1,22 @@
+id: C-0019
+title: 심리적 통제
+en: Parental psychological control
+origin: Brian Barber(1996)
+field: 발달심리학
+line: 죄책감 유발, 애정 철회, 실망 표현으로 아이의 생각과 감정을 조종하는 방식
+grade: B
+replication: 대체로 확인
+caveat: 귀가 시간 같은 행동 규칙(행동적 통제)과는 다른 개념
+studies:
+  - source: barber-1996
+    who: 청소년
+    result: 심리적 통제는 우울 같은 내면 문제와, 행동 통제 부족은 외현 문제와 관련
+examples:
+  - who: 엄마
+    text: 엄마가 너 때문에 얼마나 속상한지 알아?
+sources: [barber-1996]
+books: [between-parent-child]
+related: [자율성 지지 양육, 자기결정성 이론]
+history:
+  - date: '2026.10.27'
+    note: 등재

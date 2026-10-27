@@ -1,0 +1,82 @@
+id: P-0022
+title: 시험 전날 잠들지 못함
+category: 몸
+line: 시험 전날 누워도 머릿속에 범위가 돌고, 뒤척이다 새벽에야 잠드는 상황
+ages: [중등, 고등]
+grade: B
+facets:
+  when: [잠들기 전, 시험 직전]
+  where: [집 책상]
+  with: [혼자]
+  subject: [전 과목]
+  freq: 가끔
+factors:
+  main: 불안·긴장
+  sub: [신체 각성, 완벽주의]
+says:
+  - who: 아이
+    text: 누웠는데 계속 생각나
+  - who: 아이
+    text: 하나만 더 보고 잘게
+signals:
+  body: [심장이 빨리 뜀, 몸이 뜨거움]
+  thought: ['그 부분 안 봤는데', '못 자면 망한다']
+  action: [불 끄고 다시 책을 켬, 휴대폰으로 시간 확인]
+flow:
+  trigger: 불을 끄고 누운 직후
+  thought: '"3단원 그거 다시 봐야 하는데"'
+  feel: 심장이 뛰고 몸이 뜨거워짐
+  pattern: 일어나서 책을 다시 봄, 시간을 계속 확인
+  break: '"이제 자도 4시간" 계산이 더 큰 불안을 만듦'
+  residue: 다음 날 시험에서 멍함 → [[시험 중 머리가 하얘짐]]
+causes:
+  - 걱정이 머릿속을 계속 돌며 몸을 깨움 → [[시험 불안]]
+  - 잠을 줄여 공부하는 게 낫다는 믿음 → [[잠 줄여 공부하면 성적이 오른다]]
+  - 자는 동안 기억이 정리된다는 걸 모름 → [[수면과 기억]]
+triggers:
+  - text: 걱정되는 걸 종이에 다 쓰고 덮기
+    when: 눕기 전
+    time: 5분
+    who: 본인
+    grade: B
+  - text: 날숨을 길게, 다섯 번
+    when: 누운 뒤
+    time: 1분
+    who: 본인
+    grade: C
+  - text: 시계를 보이지 않게 돌려 두기
+    when: 눕기 전
+    time: 5초
+    who: 본인
+    grade: D
+solutions:
+  - method: '[[시험 전 걱정 쓰기]]'
+    basis: '[[표현적 글쓰기]]'
+    grade: B
+    time: 5–10분
+    age: 중1 이상
+  - method: '[[힘 줬다 풀기]]'
+    basis: '[[이완 훈련]]'
+    grade: A
+    time: 2분
+    age: 전 연령
+talk:
+  - avoid: 빨리 자. 내일 시험인데
+    instead: 머릿속에 도는 거 종이에 꺼내 놓고 자자
+small:
+  today: 시험 전날 밤 11시 이후엔 새 내용 보지 않기
+  week: 시험 주간 잠드는 시각을 정해서 지키기
+  month: 시험 전날 루틴(걱정 쓰기, 이완, 같은 시각 취침) 만들기
+recovery:
+  - 전날 정해 둔 시각에 책을 덮음
+  - 시험 전날에도 평소와 비슷하게 잠듦
+expert:
+  - 시험과 상관없이 잠들기 어려운 날이 2주 넘게 이어질 때
+limits: 시험 전날 걱정 쓰기의 수면 효과는 직접 연구가 적다. 표현적 글쓰기와 수면 연구에서 추론.
+leadsTo: [시험 중 머리가 하얘짐]
+related: [공부만 하면 졸림]
+sources: [ramirez-2011, manzoni-2008, zaccaro-2018, diekelmann-2010, gillenoneel-2013]
+books: [why-we-sleep, reasonless-calm]
+history:
+  - date: '2026.10.27'
+    note: 등재

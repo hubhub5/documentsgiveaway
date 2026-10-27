@@ -1,0 +1,123 @@
+---
+import Sec from './Sec.astro';
+import Wiki from './Wiki.astro';
+import Grade from './Grade.astro';
+import AdSlot from './AdSlot.astro';
+import { catUrl } from '../data/categories';
+interface Props { d: any; id: string }
+const { d, id } = Astro.props;
+const flow = [
+  ['계기', d.flow.trigger], ['첫 생각', d.flow.thought], ['감정·몸', d.flow.feel],
+  ['패턴', d.flow.pattern], ['무너지는 지점', d.flow.break], ['남는 것', d.flow.residue],
+];
+const signalCols = ([['몸', d.signals.body], ['생각', d.signals.thought], ['행동', d.signals.action]] as [string, string[]][]).filter(([, v]) => v.length);
+const facetRows = [
+  ['시점', d.facets.when], ['장소', d.facets.where], ['누구와', d.facets.with], ['과목', d.facets.subject],
+].filter(([, v]) => v.length);
+---
+<div class="info">
+  <div class="row"><span>분류</span><span><a class="wl" href={catUrl(d.category)}>{d.category}</a></span></div>
+  <div class="row"><span>주된 요인</span><span class="tags"><span class="tag on">{d.factors.main}</span>{d.factors.sub.map((f: string) => <span class="tag">{f}</span>)}</span></div>
+  {facetRows.map(([k, v]) => <div class="row"><span>{k}</span><span>{(v as string[]).join(' · ')}</span></div>)}
+  <div class="row"><span>빈도</span><span>{d.facets.freq}</span></div>
+  <div class="row"><span>연령</span><span>{d.ages.join(' · ')}</span></div>
+  {d.leadsTo.length > 0 && <div class="row"><span>이어지는 문제</span><span><Wiki t={d.leadsTo.map((t: string) => `[[${t}]]`).join(' → ')} /></span></div>}
+  <div class="row"><span>근거 수준</span><span><Grade g={d.grade} long /></span></div>
+</div>
+
+<Sec n="01" id="says" title="이런 말로 나타남">
+  <div class="says">{d.says.map((s: any) => <div class="say"><span>{s.who}</span><q>{s.text}</q></div>)}</div>
+</Sec>
+
+<Sec n="02" id="signals" title="신호">
+  <div class="signals" style={`grid-template-columns:repeat(${signalCols.length},1fr)`}>
+    {signalCols.map(([k, v]) => <div><h3>{k}</h3><ul>{v.map((x: string) => <li>{x}</li>)}</ul></div>)}
+  </div>
+</Sec>
+
+{d.scene.length > 0 && (
+  <Sec n="03" id="scene" title="장면">
+    {d.scene.map((sc: any) => (
+      <div class="scene">
+        <span class="mono">{sc.time}</span>
+        <div class="says">{sc.lines.map((l: any) => <div class="say"><span>{l.who}</span><q>{l.text}</q></div>)}</div>
+      </div>
+    ))}
+  </Sec>
+)}
+
+<Sec n="04" id="flow" title="무너지는 흐름">
+  <ol class="flow">
+    {flow.map(([k, v]) => <li class={k === '무너지는 지점' ? 'break' : ''}><span>{k}</span><p><Wiki t={v} /></p></li>)}
+  </ol>
+</Sec>
+
+<Sec n="05" id="causes" title="왜 거기서 꺾이나">
+  <ul class="causes">{d.causes.map((c: string, i: number) => <li><span class="mono">{i + 1}</span><span><Wiki t={c} /></span></li>)}</ul>
+</Sec>
+
+<Sec n="06" id="triggers" title="다시 살아나는 트리거" note="5분 안에, 도구 없이">
+  <div class="scroll-x">
+    <table class="tbl trig">
+      <thead><tr><th>트리거</th><th>언제</th><th>시간</th><th>누가</th><th>근거</th></tr></thead>
+      <tbody>{d.triggers.map((t: any) => <tr><td><Wiki t={t.text} /></td><td>{t.when}</td><td class="mono">{t.time}</td><td class="who">{t.who}</td><td><Grade g={t.grade} /></td></tr>)}</tbody>
+    </table>
+  </div>
+</Sec>
+
+{d.solutions.length > 0 && (
+  <Sec n="07" id="solutions" title="방법과 근거">
+    <div class="scroll-x">
+      <table class="tbl">
+        <thead><tr><th>방법</th><th>근거 개념</th><th>등급</th><th>시간</th><th>연령</th></tr></thead>
+        <tbody>{d.solutions.map((s: any) => <tr><td><Wiki t={s.method} /></td><td><Wiki t={s.basis} /></td><td><Grade g={s.grade} /></td><td class="mono">{s.time}</td><td>{s.age}</td></tr>)}</tbody>
+      </table>
+    </div>
+  </Sec>
+)}
+
+<AdSlot name="DOC-MID" />
+
+{d.talk.length > 0 && (
+  <Sec n="08" id="talk" title={d.audience === '부모' ? '나에게 하는 말' : '엄마의 말'}>
+    <div class="talk">
+      <div class="hd">피할 말</div><div class="hd">대신</div>
+      {d.talk.flatMap((t: any) => [<div>{t.avoid}</div>, <div>{t.instead}</div>])}
+    </div>
+  </Sec>
+)}
+
+<Sec n="09" id="small" title="작게 바꿔보기" note="체크는 이 기기에만 저장">
+  <div class="small" data-key={id}>
+    {[['오늘', d.small.today], ['이번 주', d.small.week], ['한 달', d.small.month]].map(([k, v], i) => (
+      <label><span class="hd"><input type="checkbox" data-i={i} /><span class="mono">{k}</span></span><p><Wiki t={v} /></p></label>
+    ))}
+  </div>
+</Sec>
+
+<Sec n="10" id="recovery" title="나아지고 있다는 신호">
+  <ul class="plain check">{d.recovery.map((r: string) => <li>{r}</li>)}</ul>
+</Sec>
+
+<Sec n="11" id="limits" title="한계와 전문가">
+  <div class="two">
+    <div class="note-box"><h3>이럴 땐 전문가에게</h3><ul class="plain check">{d.expert.map((x: string) => <li>{x}</li>)}</ul></div>
+    <div class="note-box"><h3>이 문서의 한계</h3><p>{d.limits}</p></div>
+  </div>
+</Sec>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.small[data-key]').forEach((box) => {
+    const key = 'small:' + box.dataset.key;
+    let saved: number[] = [];
+    try { saved = JSON.parse(localStorage.getItem(key) || '[]'); } catch {}
+    const inputs = [...box.querySelectorAll<HTMLInputElement>('input')];
+    inputs.forEach((el) => {
+      el.checked = saved.includes(Number(el.dataset.i));
+      el.addEventListener('change', () => {
+        const on = inputs.filter((x) => x.checked).map((x) => Number(x.dataset.i));
+        try { localStorage.setItem(key, JSON.stringify(on)); } catch {}
+      });
+    });
+  });
+</script>

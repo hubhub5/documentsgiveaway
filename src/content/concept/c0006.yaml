@@ -1,0 +1,22 @@
+id: C-0006
+title: 망각 곡선
+en: Forgetting curve
+origin: Hermann Ebbinghaus(1885)
+field: 인지심리학
+line: 배운 직후 빠르게 잊다가 점점 완만해지는 기억의 감소 모양
+grade: A
+replication: 반복 확인
+caveat: '"하루 지나면 70% 잊는다" 같은 숫자는 재료와 사람에 따라 크게 다르다'
+studies:
+  - source: murre-2015
+    who: 연구자 1명이 직접 학습
+    result: 에빙하우스의 곡선을 거의 그대로 재현. 24시간 지점에서 살짝 올라감(수면 추정)
+examples:
+  - who: 아이
+    text: 어제 분명히 알았는데 왜 다 날아갔지
+sources: [murre-2015]
+books: [make-it-stick]
+related: [간격 효과, 수면과 기억]
+history:
+  - date: '2026.10.27'
+    note: 등재

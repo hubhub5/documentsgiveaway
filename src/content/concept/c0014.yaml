@@ -1,0 +1,22 @@
+id: C-0014
+title: 심리적 대조
+en: Mental contrasting (WOOP)
+origin: Gabriele Oettingen
+field: 동기심리학
+line: 바라는 결과를 떠올린 다음 바로 그걸 막는 내 안의 장애물을 떠올리는 방법
+grade: B
+replication: 대체로 확인
+caveat: 좋은 상상만 하면 오히려 힘이 빠진다는 게 이 연구 흐름의 출발점
+studies:
+  - source: duckworth-2011
+    who: 미국 고등학생
+    result: 심리적 대조와 실행 의도를 함께 배운 집단이 PSAT 연습 문제를 약 60% 더 풂
+examples:
+  - who: 아이
+    text: 근데 막상 하려면 유튜브 켜게 돼
+sources: [duckworth-2011]
+books: [atomic-habits]
+related: [실행 의도]
+history:
+  - date: '2026.10.27'
+    note: 등재

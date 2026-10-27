@@ -1,0 +1,21 @@
+id: C-0037
+title: 자기효능감
+en: Self-efficacy
+origin: Albert Bandura(1977)
+field: 사회인지이론
+line: 이 일을 내가 해낼 수 있다는 기대. 시도할지, 얼마나 버틸지를 좌우한다
+grade: A
+replication: 반복 확인
+studies:
+  - source: bandura-1977
+    who: 이론
+    result: 직접 해낸 경험이 효능감의 가장 강한 원천
+examples:
+  - who: 아이
+    text: 이건 해 본 거니까 할 수 있을 것 같아
+sources: [bandura-1977]
+books: [mindset]
+related: [학습된 무기력, 귀인]
+history:
+  - date: '2026.10.27'
+    note: 등재

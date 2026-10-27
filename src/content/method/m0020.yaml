@@ -1,0 +1,21 @@
+id: M-0020
+title: 선택지 두 개 주기
+line: '"공부해" 대신 순서나 방식 중 하나를 아이가 고르게 하는 말 바꾸기'
+time: 10초
+tools: 없음
+ages: 전 연령
+mode: 부모와
+grade: B
+basis: [자율성 지지 양육, 자기결정성 이론]
+steps:
+  - 할 일 자체는 정해 둔다
+  - 순서, 장소, 시작 시간 중 하나를 두 가지로 제시한다
+  - 아이가 고른 것을 다시 묻지 않는다
+mistakes:
+  - 둘 다 엄마가 원하는 답으로만 만든다
+  - 고른 뒤에 '근데 그거보다 이게 낫지 않아?'
+sources: [grolnick-1989, ryan-2000]
+books: [between-parent-child, emotion-coaching]
+history:
+  - date: '2026.10.27'
+    note: 등재

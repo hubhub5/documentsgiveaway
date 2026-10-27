@@ -1,0 +1,96 @@
+id: P-0015
+title: 친구 진도에 조바심이 남
+category: 감정·자기평가
+line: 친구가 어디까지 선행했다는 말을 들은 날, 자기 공부가 다 하찮게 느껴지는 상황
+ages: [초고, 중등, 고등]
+grade: C
+facets:
+  when: [결과 후, 공부 중]
+  where: [학원, 교실, 집 책상]
+  with: [친구와]
+  subject: [수리, 전 과목]
+  freq: 매주
+factors:
+  main: 비교·조바심
+  sub: [불안·긴장, 부담·기대]
+says:
+  - who: 아이
+    text: 걔는 벌써 수2 한대
+  - who: 아이
+    text: 나만 뒤처진 것 같아
+  - who: 엄마
+    text: 너도 학원 옮길래?
+signals:
+  body: [가슴이 두근거림, 밤에 잠이 안 옴]
+  thought: ['이미 늦었다', '이거 해서 뭐해']
+  action: [지금 단원을 대충 넘김, 친구 문제집을 따라 삼]
+scene:
+  - time: 토요일 학원 쉬는 시간
+    lines:
+      - who: 친구
+        text: 나 이번 방학에 미적 끝냈어
+      - who: 아이
+        text: (웃으며) 와 대박
+  - time: 그날 저녁, 차 안
+    lines:
+      - who: 아이
+        text: 엄마, 나 너무 느린 거 아니야?
+flow:
+  trigger: 친구의 진도나 점수를 들음
+  thought: '"나는 아직 이거 하는데"'
+  feel: 가슴이 조이고 마음이 급해짐
+  pattern: 지금 공부를 빨리 끝내려고 대충 넘김
+  break: 이해 안 된 채 진도만 나가고 시험에서 무너짐
+  residue: 비교할수록 더 조급해지는 순환
+causes:
+  - 내 실력을 판단할 기준이 없을 때 주변과 견줌 → [[사회 비교]]
+  - 잘하는 집단 속에서는 같은 실력도 낮게 느낌 → [[큰 물고기 작은 연못 효과]]
+  - 엄마의 조급함이 함께 실림 → [[다른 집 아이와 비교하게 됨]]
+triggers:
+  - text: 비교 대상을 '지난달의 나'로 바꿔 한 줄 쓰기
+    when: 비교한 날 밤
+    time: 2분
+    who: 본인
+    grade: D
+  - text: '"너는 지금 어디가 제일 재밌어?" 묻기'
+    when: 진도 얘기 나올 때
+    time: 30초
+    who: 엄마
+    grade: D
+  - text: 숨 길게 내쉬고 지금 펴 둔 쪽만 보기
+    when: 가슴이 조일 때
+    time: 30초
+    who: 본인
+    grade: C
+solutions:
+  - method: '[[백지 인출]]'
+    basis: '[[인출 연습]]'
+    grade: A
+    time: 10분
+    age: 초4 이상
+  - method: '[[날숨 길게 쉬기]]'
+    basis: '[[느린 호흡]]'
+    grade: C
+    time: 30초
+    age: 전 연령
+talk:
+  - avoid: 걔는 하는데 너는 왜 못 해
+    instead: 걔 얘기 듣고 어떤 기분이었어?
+  - avoid: 우리도 빨리 선행해야겠다
+    instead: 지금 하는 거 다 꺼낼 수 있는지부터 보자
+small:
+  today: 지난달보다 나아진 것 하나 적기
+  week: 이번 단원을 덮고도 설명할 수 있는지 확인하기
+  month: 엄마가 다른 집 진도 이야기를 아이 앞에서 안 하기
+recovery:
+  - 친구 진도 이야기를 듣고도 자기 계획을 그대로 함
+  - '"걔는 걔고"라는 말이 나옴'
+expert:
+  - 비교 때문에 친구 관계를 피하거나 학교 가기를 싫어할 때
+limits: 사회 비교 연구는 상관 연구가 많아 인과가 불확실(C). 트리거는 현장 관찰(D).
+related: [다른 집 아이와 비교하게 됨, 형제와 비교당함]
+sources: [festinger-1954, marsh-1987, zaccaro-2018]
+books: [reasonless-calm, unknown]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,86 @@
+id: F-0002
+title: 잔소리가 멈추지 않음
+audience: 부모
+category: 부모
+line: 한마디만 하려 했는데 열 마디가 되고, 끝나고 나면 후회하는 상황
+ages: [부모]
+grade: B
+facets:
+  when: [시작 전, 공부 중]
+  where: [거실]
+  with: [엄마 옆]
+  subject: [전 과목]
+  freq: 거의 매일
+factors:
+  main: 불안·긴장
+  sub: [부담·기대]
+says:
+  - who: 엄마
+    text: 엄마가 몇 번을 말해
+  - who: 엄마
+    text: 그러니까 내 말은
+  - who: 아이
+    text: 알았다고 좀
+signals:
+  body: [목소리가 높아짐, 얼굴이 뜨거워짐]
+  thought: ['이번엔 꼭 알아들어야 해', '말 안 하면 안 할 거야']
+  action: [같은 말을 다른 표현으로 반복, 과거 일까지 꺼냄]
+flow:
+  trigger: 아이가 약속한 시간에 시작하지 않음
+  thought: '"또 안 하네"'
+  feel: 화가 차오르고 말이 빨라짐
+  pattern: 한 가지 지적이 과거 이야기와 인성 평가로 번짐
+  break: 아이가 귀를 닫거나 맞서고, 둘 다 상처받음
+  residue: 다음 지적은 더 짧은 시간에 더 크게 터짐
+causes:
+  - 말을 더 하면 더 알아들을 거라는 기대
+  - 아이가 '스스로' 할 여지가 사라짐 → [[자기결정성 이론]]
+  - 죄책감·실망을 섞은 말이 늘어남 → [[심리적 통제]]
+triggers:
+  - text: 할 말을 한 문장으로 정하고 그 이상 말하지 않기
+    when: 말 꺼내기 전
+    time: 10초
+    who: 엄마
+    grade: D
+  - text: 지시 대신 선택지 두 개
+    when: 시작 권할 때
+    time: 10초
+    who: 엄마
+    grade: B
+  - text: 말이 길어질 때 방을 나와 물 한 잔
+    when: 목소리 높아질 때
+    time: 1분
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[선택지 두 개 주기]]'
+    basis: '[[자율성 지지 양육]]'
+    grade: B
+    time: 10초
+    age: 성인
+  - method: '[[만약-그러면 계획]]'
+    basis: '[[실행 의도]]'
+    grade: A
+    time: 3분
+    age: 성인
+talk:
+  - avoid: 너는 맨날 그래
+    instead: 지금 8시 반이야. 뭐부터 할래?
+  - avoid: 엄마가 너 때문에 얼마나 힘든지 알아?
+    instead: 엄마 지금 화가 나서 잠깐 나갔다 올게
+small:
+  today: 잔소리 횟수를 세어만 보기
+  week: 하고 싶은 말을 한 문장으로 줄이기 다섯 번
+  month: 시작 시간 약속은 아이가 정하고 엄마는 알람만
+recovery:
+  - 한 문장에서 멈춘 날이 생김
+  - 아이가 '알았다고' 대신 대답을 함
+expert:
+  - 말다툼이 몸싸움이나 물건 던지기로 번질 때. 가족 상담
+limits: 잔소리 자체의 연구보다는 통제적 양육 연구에 기댐(B·C).
+related: [아이보다 내가 더 불안함, 엄마가 옆에 있으면 더 못함]
+sources: [ryan-2000, barber-1996, grolnick-1989, gollwitzer-2006]
+books: [between-parent-child, emotion-coaching]
+history:
+  - date: '2026.10.27'
+    note: 등재

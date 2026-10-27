@@ -1,0 +1,22 @@
+id: M-0015
+title: 힘 줬다 풀기
+line: 어깨, 손, 얼굴 근육에 5초 힘을 줬다가 한 번에 푸는 짧은 이완
+time: 1–2분
+tools: 없음
+ages: 전 연령
+mode: 둘 다
+grade: A
+basis: [이완 훈련]
+steps:
+  - 주먹을 꽉 쥐고 다섯 셀 동안 버틴다
+  - 한 번에 펴고 손끝 느낌을 열 셀 동안 본다
+  - 어깨를 귀까지 올렸다가 툭 떨어뜨린다
+  - 이를 꽉 물었다가 턱을 푼다
+mistakes:
+  - 아플 만큼 세게 준다
+  - 푼 뒤 느낌을 보지 않고 바로 다음으로 넘어간다
+sources: [manzoni-2008]
+books: [reasonless-calm, body-keeps-score]
+history:
+  - date: '2026.10.27'
+    note: 등재

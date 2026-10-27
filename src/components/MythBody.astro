@@ -1,0 +1,14 @@
+---
+import Sec from './Sec.astro';
+import Wiki from './Wiki.astro';
+import Grade from './Grade.astro';
+interface Props { d: any }
+const { d } = Astro.props;
+---
+<div class="info">
+  <div class="row"><span>통념</span><span><q>{d.claim}</q></span></div>
+  <div class="row"><span>반박 근거</span><span><Grade g={d.grade} long /></span></div>
+</div>
+<Sec n="01" id="evidence" title="실제 근거"><ul class="plain check">{d.evidence.map((s: string) => <li><Wiki t={s} /></li>)}</ul></Sec>
+<Sec n="02" id="spread" title="왜 퍼졌나"><ul class="plain check">{d.spread.map((s: string) => <li><Wiki t={s} /></li>)}</ul></Sec>
+<Sec n="03" id="instead" title="대신 할 것"><ul class="plain check">{d.instead.map((s: string) => <li><Wiki t={s} /></li>)}</ul></Sec>

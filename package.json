@@ -1,0 +1,22 @@
+{
+  "name": "study-problem-archive",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/validate.mjs && node scripts/lint-tone.mjs && astro build && pagefind --site dist && node scripts/check-links.mjs",
+    "preview": "astro preview",
+    "lint:tone": "node scripts/lint-tone.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "verify:sources": "node scripts/verify-sources.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^5.18.2",
+    "yaml": "^2.9.1"
+  },
+  "devDependencies": {
+    "pagefind": "^1.5.2"
+  }
+}

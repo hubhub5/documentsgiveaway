@@ -1,0 +1,21 @@
+id: C-0017
+title: 자기결정성 이론
+en: Self-determination theory
+origin: Deci·Ryan(1985 이후)
+field: 동기심리학
+line: 자율성·유능감·관계성이 채워질 때 스스로 하려는 동기가 자란다는 이론
+grade: A
+replication: 반복 확인
+studies:
+  - source: ryan-2000
+    who: 이론·연구 종합
+    result: 세 가지 기본 욕구가 막히면 내적 동기와 웰빙이 낮아짐
+examples:
+  - who: 아이
+    text: 하려고 했는데 엄마가 하라니까 하기 싫어졌어
+sources: [ryan-2000]
+books: [between-parent-child]
+related: [자율성 지지 양육, 심리적 통제]
+history:
+  - date: '2026.10.27'
+    note: 등재

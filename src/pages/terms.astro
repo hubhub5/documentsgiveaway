@@ -1,0 +1,12 @@
+---
+import Info from '../layouts/Info.astro';
+import { site } from '../config/site';
+---
+<Info title="이용약관" code="TERMS" description={`${site.name} 이용에 관한 기본 조건입니다.`}>
+  <ul>
+    <li>이 사이트의 내용은 정보 제공용이며 의학적·심리학적 진단, 상담, 치료를 대신하지 않습니다.</li>
+    <li>문서의 글과 구성의 저작권은 {site.author}에게 있습니다. 출처를 밝힌 짧은 인용은 허용합니다.</li>
+    <li>인용한 연구의 저작권은 각 저자와 학술지에 있으며, 이 사이트는 서지 정보와 요약만 싣습니다.</li>
+    <li>내용은 예고 없이 고쳐질 수 있으며 고친 기록은 각 문서의 ‘문서 이력’에 남깁니다.</li>
+  </ul>
+</Info>

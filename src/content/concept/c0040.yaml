@@ -1,0 +1,21 @@
+id: C-0040
+title: 사회적 촉진
+en: Social facilitation
+origin: Robert Zajonc(1965)
+field: 사회심리학
+line: 누가 지켜보면 익숙한 일은 더 잘 되고, 낯선 일은 더 안 된다
+grade: B
+replication: 대체로 확인
+studies:
+  - source: zajonc-1965
+    who: 연구 종합
+    result: 관찰자가 있으면 잘 익힌 반응은 강해지고 새 과제 수행은 떨어짐
+examples:
+  - who: 아이
+    text: 엄마가 보고 있으면 아는 것도 틀려
+sources: [zajonc-1965]
+books: [between-parent-child]
+related: [압박 속 수행 저하]
+history:
+  - date: '2026.10.27'
+    note: 등재

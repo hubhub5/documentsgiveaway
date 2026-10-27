@@ -1,0 +1,19 @@
+id: X-0005
+title: 잠 줄여 공부하면 성적이 오른다
+claim: 시험 기간엔 잠을 줄여서라도 공부 시간을 늘려야 한다
+grade: B
+evidence:
+  - 잠을 줄이고 공부한 다음 날 수업 이해와 시험 관련 문제가 오히려 늘어남 (Gillen-O'Neel 외 2013)
+  - 자는 동안 낮에 배운 기억이 공고화됨 (Diekelmann·Born 2010)
+spread:
+  - 늦게까지 책상에 있으면 열심히 했다는 느낌이 남
+  - 다음 날 손해는 눈에 잘 안 보임
+instead:
+  - 늦은 밤 30분은 새 공부 대신 [[백지 인출]] 한 번
+  - 잠자는 시간은 고정하고 공부 시간을 앞으로 당기기
+sources: [gillenoneel-2013, diekelmann-2010]
+books: [why-we-sleep]
+related: [시험 전날 잠들지 못함]
+history:
+  - date: '2026.10.27'
+    note: 등재

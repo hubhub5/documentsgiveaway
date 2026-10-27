@@ -1,0 +1,25 @@
+id: C-0035
+title: 스트레스와 기억 인출
+en: Stress and memory retrieval
+origin: de Quervain 외(1998) 등
+field: 신경과학
+line: 급한 스트레스가 이미 저장된 기억을 꺼내는 과정을 막을 수 있다
+grade: B
+replication: 대체로 확인
+caveat: 원 연구는 쥐 실험. 사람에게서는 인출 연습이 이 영향을 줄인다는 결과가 있음
+studies:
+  - source: dequervain-1998
+    who: 쥐
+    result: 스트레스 호르몬이 높을 때 이미 배운 길을 떠올리지 못함
+  - source: smith-2016
+    who: 대학생
+    result: 인출 연습으로 배운 내용은 스트레스 뒤에도 회상이 유지됨
+examples:
+  - who: 아이
+    text: 시험 끝나고 나오자마자 다 생각났어
+sources: [dequervain-1998, smith-2016]
+books: [unknown]
+related: [시험 불안, 인출 연습]
+history:
+  - date: '2026.10.27'
+    note: 등재

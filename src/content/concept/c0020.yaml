@@ -1,0 +1,24 @@
+id: C-0020
+title: 능력 칭찬과 과정 칭찬
+en: Person praise vs process praise
+origin: Mueller·Dweck(1998)
+field: 발달·동기심리학
+line: '"똑똑하다"는 칭찬과 "끝까지 해 봤구나"는 칭찬이 실패 뒤의 반응을 다르게 만든다'
+grade: B
+replication: 대체로 확인
+caveat: 원 연구는 초등 5학년 실험. 칭찬 한마디보다 평소 반복되는 말의 패턴이 더 크게 작용함
+studies:
+  - source: mueller-1998
+    who: 초등 5학년
+    result: 지능 칭찬을 받은 아이가 실패 뒤 덜 버티고 점수도 낮았음
+examples:
+  - who: 엄마
+    text: 역시 우리 딸 머리 좋아
+  - who: 엄마
+    text: 어려운 문제를 세 번이나 다시 봤네
+sources: [mueller-1998]
+books: [mindset]
+related: [마인드셋, 귀인]
+history:
+  - date: '2026.10.27'
+    note: 등재

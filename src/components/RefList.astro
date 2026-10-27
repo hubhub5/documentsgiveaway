@@ -1,0 +1,22 @@
+---
+import { registry, sourceUrl } from '../lib/docs';
+interface Props { ids: string[] }
+const reg = await registry();
+const list = [...new Set(Astro.props.ids)].map((id) => {
+  const s = reg.sources.get(id);
+  if (!s) throw new Error(`없는 출처: ${id}`);
+  return s;
+});
+---
+<ol class="refs">
+  {list.map((s, i) => (
+    <li id={`ref-${s.id}`}>
+      <span class="mono">[{i + 1}]</span>
+      <div>
+        {s.authors} ({s.year}). <a class="t" href={sourceUrl(s.id)}>{s.title}</a>. <em>{s.venue}</em>{s.volume && `, ${s.volume}`}{s.pages && `, ${s.pages}`}.
+        {s.doi && <> <a class="mono" href={`https://doi.org/${s.doi}`} target="_blank" rel="noopener">doi:{s.doi}</a></>}
+        <div class="k">{s.type} — {s.note}</div>
+      </div>
+    </li>
+  ))}
+</ol>

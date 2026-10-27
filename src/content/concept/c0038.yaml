@@ -1,0 +1,28 @@
+id: C-0038
+title: 마인드셋
+en: Growth mindset
+origin: Carol Dweck
+field: 동기심리학
+line: 능력이 노력과 전략으로 자란다고 믿는지가 실패 뒤 반응을 바꾼다는 주장
+grade: B
+replication: 논란
+caveat: 메타분석에서 성적과의 관계와 개입 효과가 모두 작게 나옴. 하위권 학생에게서 소폭 효과
+studies:
+  - source: sisk-2018
+    who: 연구 종합
+    result: 마인드셋과 성적의 관계, 개입 효과 모두 작음
+  - source: yeager-2019
+    who: 미국 9학년 전국 표본
+    result: 1시간 미만 온라인 개입이 하위권 학생 성적을 소폭 올림
+  - source: mueller-1998
+    who: 초등 5학년
+    result: 지능 칭찬은 실패 뒤 끈기를 낮춤
+examples:
+  - who: 엄마
+    text: 아직 못 하는 거지 못하는 게 아니야
+sources: [sisk-2018, yeager-2019, mueller-1998]
+books: [mindset]
+related: [능력 칭찬과 과정 칭찬, 귀인]
+history:
+  - date: '2026.10.27'
+    note: 등재

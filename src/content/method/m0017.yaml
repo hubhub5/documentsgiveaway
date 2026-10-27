@@ -1,0 +1,22 @@
+id: M-0017
+title: 왜 질문 붙이기
+line: 외울 사실 옆에 '왜 그럴까'를 적고 스스로 답을 달아 보는 방법
+time: 항목당 30초
+tools: 연필
+ages: 초5 이상
+mode: 둘 다
+grade: B
+basis: [정교화 질문, 자기 설명]
+steps:
+  - 외울 문장 하나를 고른다
+  - 옆에 '왜?'를 쓴다
+  - 아는 것만으로 이유를 한 줄 만든다
+  - 교과서에서 맞는지 확인한다
+mistakes:
+  - 답을 먼저 찾아보고 옮겨 쓴다
+  - 모든 문장에 붙여서 시간이 모자란다
+sources: [pressley-1987, dunlosky-2013]
+books: [make-it-stick]
+history:
+  - date: '2026.10.27'
+    note: 등재

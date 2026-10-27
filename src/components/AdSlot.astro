@@ -1,0 +1,16 @@
+---
+import { ads } from '../config/ads';
+interface Props { name: string }
+const { name } = Astro.props;
+const slot = ads.slots[name];
+---
+{ads.enabled && slot.id ? (
+  <div class="ad-live" style={`min-height:${slot.minHeight}px;margin:28px 0`} data-pagefind-ignore>
+    <ins class="adsbygoogle" style="display:block" data-ad-client={ads.client} data-ad-slot={slot.id} data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+) : (
+  <div class="ad-slot mono" style={`min-height:${slot.minHeight || 120}px`} aria-hidden="true" data-pagefind-ignore>
+    AD · {name} · {slot.size}
+  </div>
+)}

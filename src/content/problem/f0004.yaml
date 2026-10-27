@@ -1,0 +1,72 @@
+id: F-0004
+title: 다른 집 아이와 비교하게 됨
+audience: 부모
+category: 부모
+line: 단톡방이나 학원 설명회에서 들은 다른 집 진도가 머리에서 떠나지 않아 우리 아이가 늦어 보이는 상황
+ages: [부모]
+grade: C
+facets:
+  when: [결과 후, 공부 중]
+  where: [거실, 학원]
+  with: [엄마 옆]
+  subject: [전 과목]
+  freq: 매주
+factors:
+  main: 비교·조바심
+  sub: [불안·긴장]
+says:
+  - who: 엄마
+    text: 옆집 애는 벌써 중등 수학 끝냈대
+  - who: 엄마
+    text: 우리도 뭔가 해야 하는 거 아냐?
+signals:
+  body: [설명회 다녀온 날 잠이 안 옴]
+  thought: ['우리만 늦었어', '지금 안 하면 끝']
+  action: [학원 검색, 문제집 추가 구매, 아이에게 진도 확인]
+flow:
+  trigger: 다른 집 아이의 진도·성적 소식
+  thought: '"우리 애는 아직…"'
+  feel: 조바심, 뒤처질 것 같은 공포
+  pattern: 계획에 없던 문제집과 학원을 늘림
+  break: 아이의 소화 속도를 넘는 양이 쌓여 아이가 지침
+  residue: 아이도 비교에 민감해짐 → [[친구 진도에 조바심이 남]]
+causes:
+  - 기준이 없을 때 주변과 견줌 → [[사회 비교]]
+  - '"선행 = 앞섬"이라는 숨은 전제 → [[숨은 전제]]'
+  - 내 불안을 줄이려는 결정 → [[아이보다 내가 더 불안함]]
+triggers:
+  - text: '"그 말이 맞으려면 뭐가 당연해야 하지?" 한 줄 써 보기'
+    when: 소식 들은 날
+    time: 2분
+    who: 엄마
+    grade: C
+  - text: 문제집 추가는 사흘 뒤에 다시 결정하기
+    when: 사고 싶을 때
+    time: 10초
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[숨은 전제 한 줄 쓰기]]'
+    basis: '[[숨은 전제]]'
+    grade: C
+    time: 2분
+    age: 성인
+talk:
+  - avoid: 걔는 벌써 끝냈대
+    instead: 지금 하는 단원은 덮고도 설명할 수 있어?
+small:
+  today: 오늘 들은 다른 집 이야기를 아이 앞에서 꺼내지 않기
+  week: 비교 소식 들은 날 숨은 전제 한 줄 쓰기
+  month: 우리 아이 기준표(지난달 대비)를 만들기
+recovery:
+  - 다른 집 소식을 듣고도 계획을 바꾸지 않음
+  - 아이 앞에서 비교 이야기가 줄어듦
+expert:
+  - 비교와 걱정으로 부부·가족 갈등이 커질 때
+limits: 부모의 비교 행동 연구는 이 사전에 아직 없다. 사회 비교 이론에서 추론(C).
+related: [친구 진도에 조바심이 남, 형제와 비교당함, 아이보다 내가 더 불안함]
+sources: [festinger-1954, toulmin-1958]
+books: [reasonless-calm, rulebook-arguments]
+history:
+  - date: '2026.10.27'
+    note: 등재

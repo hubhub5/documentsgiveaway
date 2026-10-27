@@ -1,0 +1,24 @@
+---
+import { books, bookUrl } from '../data/books';
+interface Props { ids: string[] }
+const list = Astro.props.ids.map((id) => {
+  const b = books[id];
+  if (!b) throw new Error(`books.ts에 없는 도서: ${id}`);
+  return b;
+}).sort((a, b) => Number(!!b.own) - Number(!!a.own));
+const affiliate = list.some((b) => !b.url || b.url.includes('coupang'));
+---
+{list.length > 0 && (
+  <div data-pagefind-ignore>
+    {affiliate && <p class="disclose">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>}
+    <ul class="books">
+      {list.map((b) => (
+        <li class={b.own ? 'book own' : 'book'}>
+          <span class="spine" aria-hidden="true">{b.title}</span>
+          <div><b>『{b.title}』</b><small>{b.author} · {b.publisher} · {b.year}{b.own && ' · 이 사전의 저자'}</small></div>
+          <a class="go" href={bookUrl(b)} target="_blank" rel={b.url && !b.url.includes('coupang') ? 'noopener' : 'sponsored noopener'}>{b.url?.includes('ridibooks') ? '리디에서 보기' : '쿠팡에서 보기'}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}

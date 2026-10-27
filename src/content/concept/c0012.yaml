@@ -1,0 +1,24 @@
+id: C-0012
+title: 계획 오류
+en: Planning fallacy
+origin: Kahneman·Tversky(1979), Buehler 외(1994)
+field: 인지심리학
+line: 자기 일이 끝나는 시간을 거의 언제나 짧게 예상하는 경향
+grade: A
+replication: 반복 확인
+caveat: 과거에 얼마나 걸렸는지 알아도 예상은 잘 고쳐지지 않는다
+studies:
+  - source: buehler-1994
+    who: 대학생
+    result: 졸업논문 완료 예상 평균 약 34일, 실제 약 56일
+examples:
+  - who: 아이
+    text: 이거 30분이면 끝나
+  - who: 엄마
+    text: 지난번엔 몇 분 걸렸더라?
+sources: [buehler-1994]
+books: [thinking-fast-slow]
+related: [실행 의도, 미루기와 기분 조절]
+history:
+  - date: '2026.10.27'
+    note: 등재

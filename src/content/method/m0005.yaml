@@ -1,0 +1,22 @@
+id: M-0005
+title: 날숨 길게 쉬기
+line: 들숨보다 날숨을 두 배쯤 길게, 서너 번 쉬어 몸의 속도를 낮추는 방법
+time: 30초–1분
+tools: 없음
+ages: 전 연령
+mode: 둘 다
+grade: C
+basis: [느린 호흡]
+steps:
+  - 코로 넷 셀 동안 들이쉰다
+  - 입으로 여섯에서 여덟 셀 동안 내쉰다
+  - 세 번에서 다섯 번 반복한다
+  - 어깨가 내려갔는지 확인한다
+mistakes:
+  - 숨을 크게 들이쉬는 데만 신경 쓴다
+  - 빨리 끝내려고 세는 속도를 올린다
+sources: [zaccaro-2018]
+books: [reasonless-calm]
+history:
+  - date: '2026.10.27'
+    note: 등재

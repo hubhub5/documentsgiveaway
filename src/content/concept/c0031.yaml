@@ -1,0 +1,24 @@
+id: C-0031
+title: 텍스트 구조
+en: Text structure
+origin: Meyer 외(1980)
+field: 읽기 교육
+line: 설명문은 비교·원인결과·문제해결 같은 뼈대를 갖고 있고, 그 뼈대를 보면 내용이 붙는다
+grade: A
+replication: 반복 확인
+studies:
+  - source: meyer-1980
+    who: 미국 9학년
+    result: 글의 상위 구조를 쓰는 학생이 더 많이, 더 정확히 회상함
+  - source: hebert-2016
+    who: 연구 종합
+    result: 텍스트 구조를 가르치면 설명문 독해가 향상됨
+examples:
+  - who: 아이
+    text: 이 문단은 왜 갑자기 이 얘길 해?
+sources: [meyer-1980, hebert-2016]
+books: [reading-brain]
+related: [상황 모델, 숨은 전제]
+history:
+  - date: '2026.10.27'
+    note: 등재

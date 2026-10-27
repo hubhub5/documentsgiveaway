@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import { registry } from '../lib/docs';
+const reg = await registry();
+const urls = reg.docs.map((d) => d.url);
+---
+<Base title="임의 문서" noindex>
+  <div class="wrap page"><p class="mono mute">임의 문서로 이동 중…</p><noscript><a href="/분류/">분류에서 고르기</a></noscript></div>
+  <script is:inline define:vars={{ urls }}>location.replace(urls[Math.floor(Math.random() * urls.length)]);</script>
+</Base>

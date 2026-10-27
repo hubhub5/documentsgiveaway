@@ -1,0 +1,24 @@
+id: C-0024
+title: 자기 불구화
+en: Self-handicapping
+origin: Berglas·Jones(1978)
+field: 사회심리학
+line: 실패해도 능력 탓이 안 되도록 미리 핑계거리를 만들어 두는 행동
+grade: B
+replication: 대체로 확인
+studies:
+  - source: berglas-1978
+    who: 대학생
+    result: 성공 이유가 불확실할 때 수행을 방해하는 약을 스스로 고르는 경향
+  - source: covington-2000
+    who: 연구 종합
+    result: 자기 가치를 지키려고 노력 자체를 피하는 학생이 있음
+examples:
+  - who: 아이
+    text: 나 어제 공부 하나도 안 했어
+sources: [berglas-1978, covington-2000]
+books: [mindset]
+related: [완벽주의, 귀인]
+history:
+  - date: '2026.10.27'
+    note: 등재

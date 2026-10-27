@@ -1,0 +1,84 @@
+id: P-0013
+title: 휴대폰을 내려놓지 못함
+category: 시작·지속
+line: 공부 중 알림 하나에 손이 가고, 정신 차리면 30분이 지나 있는 상황
+ages: [중등, 고등]
+grade: C
+facets:
+  when: [공부 중, 시작 전]
+  where: [집 책상, 독서실]
+  with: [혼자]
+  subject: [전 과목]
+  freq: 거의 매일
+factors:
+  main: 주의 분산
+  sub: [회피]
+says:
+  - who: 아이
+    text: 단톡 답장만 하고
+  - who: 아이
+    text: 뒤집어 놨잖아. 안 봐
+  - who: 엄마
+    text: 휴대폰 이리 줘
+signals:
+  body: [손이 저절로 감]
+  thought: ['잠깐이면 돼', '중요한 연락일 수도']
+  action: [화면을 자주 켜 봄, 공부 앱 켰다가 다른 앱]
+flow:
+  trigger: 문제가 막히거나 지루해지는 순간
+  thought: '"잠깐만 보고"'
+  feel: 막힌 답답함이 잠깐 풀리는 느낌
+  pattern: 막힐 때마다 휴대폰으로 도망감
+  break: 30분 뒤 '오늘 망했다'
+  residue: 엄마와 휴대폰 갈등이 커짐 → [[엄마가 옆에 있으면 더 못함]]
+causes:
+  - 막힘과 지루함을 피하는 가장 빠른 출구 → [[지루함]]
+  - 눈에 보이는 곳에 있는 것만으로 주의가 일부 묶일 수 있음 → [[휴대폰의 존재 효과]]
+  - 의지 문제로만 보면 해결책이 '참기'뿐
+triggers:
+  - text: 공부 시작 전에 거실 충전기에 꽂기
+    when: 시작 전
+    time: 10초
+    who: 본인
+    grade: C
+  - text: 막혔을 때 휴대폰 대신 문제에 표시하고 다음 문제
+    when: 막힐 때
+    time: 5초
+    who: 본인
+    grade: D
+  - text: 휴대폰 둘 곳을 가족 모두 같이 쓰기
+    when: 저녁 시간
+    time: 1분
+    who: 같이
+    grade: D
+solutions:
+  - method: '[[휴대폰 다른 방에 두기]]'
+    basis: '[[휴대폰의 존재 효과]]'
+    grade: C
+    time: 10초
+    age: 전 연령
+  - method: '[[만약-그러면 계획]]'
+    basis: '[[실행 의도]]'
+    grade: A
+    time: 3분
+    age: 초4 이상
+talk:
+  - avoid: 휴대폰 압수야
+    instead: 공부할 땐 거실에 같이 두자. 엄마 것도
+small:
+  today: 1시간만 휴대폰을 다른 방에 두고 어땠는지 말하기
+  week: 막힐 때 휴대폰 대신 할 행동 하나 정하기
+  month: 가족 휴대폰 두는 자리 만들기
+recovery:
+  - 스스로 휴대폰을 다른 방에 두고 옴
+  - 막혔을 때 다른 행동을 먼저 함
+expert:
+  - 휴대폰이 없으면 극심하게 불안하거나 잠을 못 잘 때
+limits: 휴대폰 존재 효과는 재현 결과가 엇갈린다(C). 다른 방에 두기는 비용이 적어 권함.
+leadsTo: [엄마가 옆에 있으면 더 못함]
+related: [책상에 앉기까지 오래 걸림]
+sources: [ward-2017, eastwood-2012, gollwitzer-2006]
+books: [stolen-focus]
+history:
+  - date: '2026.10.27'
+    note: 등재

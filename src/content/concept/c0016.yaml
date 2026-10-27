@@ -1,0 +1,22 @@
+id: C-0016
+title: 학습된 무기력
+en: Learned helplessness
+origin: Seligman·Maier(1967), Maier·Seligman(2016) 재해석
+field: 행동신경과학
+line: 해도 소용없다는 경험이 쌓이면 시도 자체를 멈추는 상태
+grade: A
+replication: 반복 확인
+caveat: 50년 뒤 재해석에서는 무기력이 기본 반응이고, 학습되는 것은 '통제할 수 있다'는 감각이라고 봄
+studies:
+  - source: maier-2016
+    who: 동물·인간 연구 종합
+    result: 통제 경험이 뇌의 반응을 바꿔 다음 스트레스에서 덜 무너지게 함
+examples:
+  - who: 아이
+    text: 해 봤자 어차피 70점이야
+sources: [maier-2016]
+books: [optimistic-child]
+related: [귀인, 자기효능감]
+history:
+  - date: '2026.10.27'
+    note: 등재

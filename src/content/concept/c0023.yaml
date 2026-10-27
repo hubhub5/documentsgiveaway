@@ -1,0 +1,21 @@
+id: C-0023
+title: 큰 물고기 작은 연못 효과
+en: Big-fish-little-pond effect
+origin: Herbert Marsh(1987)
+field: 교육심리학
+line: 같은 실력이라도 잘하는 집단 안에 있으면 스스로를 낮게 평가하게 되는 효과
+grade: A
+replication: 반복 확인
+studies:
+  - source: marsh-1987
+    who: 고등학생
+    result: 학교 평균 수준이 높을수록 개인의 학업 자아개념이 낮아짐
+examples:
+  - who: 아이
+    text: 우리 반에선 내가 꼴찌야
+sources: [marsh-1987]
+books: [reasonless-calm]
+related: [사회 비교]
+history:
+  - date: '2026.10.27'
+    note: 등재

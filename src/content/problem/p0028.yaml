@@ -1,0 +1,75 @@
+id: P-0028
+title: 문단 사이 연결을 놓침
+category: 읽기
+line: ‘그러나’, ‘따라서’ 같은 전환 신호를 그냥 지나쳐서 글의 방향이 바뀐 걸 모르는 상황
+ages: [초고, 중등, 고등]
+grade: B
+facets:
+  when: [공부 중, 시험 중]
+  where: [집 책상, 교실]
+  with: [혼자]
+  subject: [독해]
+  freq: 매주
+factors:
+  main: 주의 분산
+  sub: [불안·긴장]
+says:
+  - who: 아이
+    text: 글쓴이가 찬성하는 줄 알았는데
+  - who: 아이
+    text: 앞에선 이렇게 말했잖아
+signals:
+  body: []
+  thought: ['앞 내용이 맞는 말 같은데']
+  action: [접속어 앞 문장에 밑줄, 반대 내용을 정답으로 고름]
+flow:
+  trigger: 앞 문단에서 남의 주장을 길게 소개함
+  thought: '"이게 글쓴이 생각이구나"'
+  feel: 이해했다는 안도감
+  pattern: '"그러나" 뒤를 앞 내용의 연장으로 읽음'
+  break: 글쓴이 입장을 정반대로 고름
+  residue: '"국어는 문제가 이상해"'
+causes:
+  - 접속어를 단어로만 보고 '방향 전환'으로 보지 않음 → [[텍스트 구조]]
+  - 소개한 주장과 글쓴이 주장을 구분하는 연습이 없음 → [[숨은 전제]]
+triggers:
+  - text: 그러나·하지만·오히려 앞에서 멈추고 '방향 바뀜' 표시
+    when: 읽는 중
+    time: 3초
+    who: 본인
+    grade: D
+  - text: '"이건 누구 생각이야?"를 문단마다 묻기'
+    when: 읽는 중
+    time: 10초
+    who: 본인
+    grade: D
+solutions:
+  - method: '[[문단에 역할 붙이기]]'
+    basis: '[[텍스트 구조]]'
+    grade: A
+    time: 3분
+    age: 초5 이상
+  - method: '[[숨은 전제 한 줄 쓰기]]'
+    basis: '[[숨은 전제]]'
+    grade: C
+    time: 문장당 1분
+    age: 중1 이상
+talk:
+  - avoid: 끝까지 꼼꼼히 읽어
+    instead: 이 문단은 누구 생각이야? 글쓴이 거야?
+small:
+  today: 지문 하나에서 방향 바뀌는 접속어 모두 표시
+  week: '"누구 생각?" 질문을 지문 다섯 개에'
+  month: 칼럼 하나에서 소개된 주장과 글쓴이 주장 나눠 쓰기
+recovery:
+  - 접속어 앞에서 스스로 멈춤
+  - 글쓴이 입장을 반대로 고르는 실수가 줄어듦
+expert:
+  - 듣기에서도 말의 방향을 자주 놓칠 때
+limits: 전환 신호 표시는 현장 기법(D). 텍스트 구조 교육의 근거를 빌려 씀.
+related: [지문을 다 읽었는데 요지를 모름, 함정 선지에 자꾸 걸림]
+sources: [meyer-1980, hebert-2016, toulmin-1958]
+books: [reading-brain, rulebook-arguments]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import Block from '../../components/Block.astro';
+import { registry } from '../../lib/docs';
+import { categories, catUrl } from '../../data/categories';
+const reg = await registry();
+const of = (name: string) => reg.docs.filter((d) => (d.kind === 'problem' ? d.data.category : d.ns) === name);
+---
+<Base title="분류" current="분류" description="공부 문제 사전의 전체 분류와 문서 목록">
+  <div class="wrap page">
+    <div class="page-head"><p class="kicker mono">INDEX</p><h1>분류</h1><p>문제 상황은 여섯 갈래와 부모 쪽 문제로, 근거 문서는 개념·방법·오해로 나눴습니다.</p></div>
+    {categories.map((c) => (
+      <section style="margin-bottom:48px">
+        <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:12px">
+          <h2 style="font-size:18px"><a href={catUrl(c.name)}>{c.name}</a></h2>
+          <span class="mono mute">{c.code} · {of(c.name).length}건</span>
+          <span class="mute" style="font-size:13px">{c.line}</span>
+        </div>
+        <div class="blocks">{of(c.name).map((d) => <Block doc={d} reg={reg} />)}</div>
+      </section>
+    ))}
+  </div>
+</Base>

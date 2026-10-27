@@ -1,0 +1,87 @@
+id: P-0027
+title: 지문을 다 읽었는데 요지를 모름
+category: 읽기
+line: 끝까지 읽었는데 '그래서 이 글이 뭐라는 거야'에 한 줄로 답하지 못하는 상황
+ages: [초고, 중등, 고등]
+grade: A
+facets:
+  when: [공부 중, 시험 중]
+  where: [집 책상, 교실]
+  with: [혼자]
+  subject: [독해]
+  freq: 거의 매일
+factors:
+  main: 무력감
+  sub: [주의 분산]
+says:
+  - who: 아이
+    text: 다 읽었는데 무슨 얘긴지 모르겠어
+  - who: 아이
+    text: 국어는 감으로 푸는 거야
+signals:
+  body: [눈이 같은 줄을 맴돎]
+  thought: ['단어는 다 아는데', '왜 이 얘길 하지']
+  action: [처음부터 다시 읽음, 모든 문장에 밑줄]
+scene:
+  - time: 중2 국어 문제집, 설명문 지문 1,200자
+    lines:
+      - who: 아이
+        text: 밑줄 다 쳤는데 중심 문장이 뭐야?
+flow:
+  trigger: 문단이 바뀌며 화제가 달라진 것처럼 보임
+  thought: '"갑자기 왜 이 얘기?"'
+  feel: 머리가 흐려지고 지루해짐
+  pattern: 문장 하나하나는 이해하면서 문단 사이 관계는 놓침
+  break: 처음부터 다시 읽다 시간이 부족해짐
+  residue: '"국어는 감"이라는 믿음 → [[긴 글을 보면 시작 전에 지침]]'
+causes:
+  - 문장은 읽었지만 글이 말하는 상황을 짓지 못함 → [[상황 모델]]
+  - 글의 뼈대(비교·원인·문제해결)를 보지 않음 → [[텍스트 구조]]
+  - 다 읽은 뒤 스스로 설명해 보는 단계가 없음 → [[자기 설명]]
+triggers:
+  - text: 문단 하나 끝날 때마다 '그러니까'로 한 줄 말하기
+    when: 읽는 중
+    time: 20초
+    who: 본인
+    grade: B
+  - text: 문단 옆에 역할을 한 단어로 적기
+    when: 읽는 중
+    time: 10초
+    who: 본인
+    grade: A
+  - text: 접속어에만 동그라미 치며 한 번 훑기
+    when: 두 번째 읽을 때
+    time: 1분
+    who: 본인
+    grade: D
+solutions:
+  - method: '[[문단에 역할 붙이기]]'
+    basis: '[[텍스트 구조]]'
+    grade: A
+    time: 3분
+    age: 초5 이상
+  - method: '[[읽고 한 줄로 말하기]]'
+    basis: '[[자기 설명]]'
+    grade: B
+    time: 문단당 20초
+    age: 초3 이상
+talk:
+  - avoid: 책을 안 읽어서 그래
+    instead: 이 문단은 앞 문단이랑 무슨 관계야?
+small:
+  today: 지문 하나를 문단마다 한 줄로 말하며 읽기
+  week: 설명문 세 개에 문단 역할 붙이기
+  month: 신문 칼럼 하나를 매주 한 줄 요약
+recovery:
+  - 다 읽고 한 줄로 요지를 말함
+  - 밑줄이 줄고 접속어 동그라미가 늘어남
+expert:
+  - 소리 내어 읽기 자체가 또래보다 크게 느리거나 틀릴 때. 읽기 평가 상담
+limits: 텍스트 구조 연구는 영어권 설명문 중심. 한국어 지문에 대한 직접 근거는 적다.
+leadsTo: [긴 글을 보면 시작 전에 지침]
+related: [문단 사이 연결을 놓침, 함정 선지에 자꾸 걸림, 읽을 땐 아는데 문제는 못 풂]
+sources: [kintsch-1988, meyer-1980, hebert-2016, chi-1994]
+books: [reading-brain, rulebook-arguments]
+history:
+  - date: '2026.10.27'
+    note: 등재

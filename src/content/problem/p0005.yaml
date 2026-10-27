@@ -1,0 +1,99 @@
+id: P-0005
+title: 읽을 땐 아는데 문제는 못 풂
+category: 기억·인출
+line: 교과서를 읽을 땐 다 아는 것 같은데, 문제집을 펴면 손이 안 나가는 상황
+ages: [초고, 중등, 고등]
+grade: A
+facets:
+  when: [공부 중]
+  where: [집 책상, 독서실]
+  with: [혼자]
+  subject: [암기, 수리, 독해]
+  freq: 거의 매일
+factors:
+  main: 수치심·자책
+  sub: [회피]
+says:
+  - who: 아이
+    text: 보면 아는데 안 보면 몰라
+  - who: 아이
+    text: 개념은 다 아는데 문제가 이상해
+  - who: 엄마
+    text: 그렇게 오래 앉아 있었는데?
+signals:
+  body: [하품, 눈이 뻑뻑함]
+  thought: ['이 정도면 다 안다', '문제가 꼬였네']
+  action: [형광펜 칠이 늘어남, 문제집 대신 교과서를 다시 폄]
+scene:
+  - time: 일요일 오후 2시, 방. 과학 교과서 3회독째
+    lines:
+      - who: 아이
+        text: 이제 다 알 것 같아
+  - time: 같은 날 4시, 문제집 첫 쪽
+    lines:
+      - who: 아이
+        text: 어? 이거 어디 나왔었지
+flow:
+  trigger: 문제의 질문 방식이 교과서 문장과 다름
+  thought: '"분명히 읽은 건데"'
+  feel: 머리가 멍해지고 짜증이 올라옴
+  pattern: 문제를 덮고 교과서로 돌아가 다시 읽음
+  break: 읽는 시간만 늘고 문제 푸는 시간은 계속 줄어듦
+  residue: 시험에서 '아는데 틀렸다'가 반복됨 → [[아는 문제인데 시험에서 틀림]]
+causes:
+  - 익숙하게 읽히는 느낌을 안다고 착각함 → [[유창성 착각]]
+  - 다시 읽기는 꺼내는 연습이 아님 → [[인출 연습]]
+  - 문제는 개념을 '골라 쓰는' 일이라 따로 연습이 필요함 → [[교차 연습]]
+triggers:
+  - text: 한 쪽 읽을 때마다 책 덮고 한 줄로 말하기
+    when: 읽는 중
+    time: 20초
+    who: 본인
+    grade: B
+  - text: 교과서 펴기 전에 문제 하나부터 풀어 보기
+    when: 공부 시작
+    time: 3분
+    who: 본인
+    grade: B
+  - text: '"보면 아는 것"과 "덮고도 아는 것"에 다른 색 표시'
+    when: 복습할 때
+    time: 1분
+    who: 본인
+    grade: D
+solutions:
+  - method: '[[읽고 한 줄로 말하기]]'
+    basis: '[[자기 설명]]'
+    grade: B
+    time: 문단당 20초
+    age: 초3 이상
+  - method: '[[백지 인출]]'
+    basis: '[[인출 연습]]'
+    grade: A
+    time: 10분
+    age: 초4 이상
+  - method: '[[섞어 풀기]]'
+    basis: '[[교차 연습]]'
+    grade: B
+    time: 20분
+    age: 초5 이상
+talk:
+  - avoid: 몇 번을 읽었는데 아직도 몰라?
+    instead: 책 덮고 엄마한테 하나만 설명해 줄래?
+  - avoid: 개념이 안 잡혀서 그래
+    instead: 어떤 문제에서 막혔는지 보여 줘
+small:
+  today: 오늘 읽은 쪽에서 문제 세 개만 먼저 풀기
+  week: 다시 읽기 횟수를 절반으로 줄이고 그 시간에 백지 인출
+  month: 시험 범위마다 '덮고도 아는 것' 비율을 기록
+recovery:
+  - 교과서를 다시 펴기 전에 문제부터 손이 감
+  - '"보면 아는 거"와 "진짜 아는 거"를 스스로 구분해서 말함'
+expert:
+  - 글을 읽고 이해하는 것 자체가 또래보다 크게 어려울 때
+limits: 유창성 착각 연구는 대학생 중심. 초등 고학년부터 적용 가능하다고 보는 것은 현장 관찰에 기댐.
+related: [외운 것이 떠오르지 않음, 지문을 다 읽었는데 요지를 모름]
+sources: [koriat-2005, callender-2009, roediger-2006, chi-1994, rohrer-2007]
+books: [metacognition, make-it-stick]
+history:
+  - date: '2026.10.27'
+    note: 등재

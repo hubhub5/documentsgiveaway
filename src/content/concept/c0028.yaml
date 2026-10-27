@@ -1,0 +1,22 @@
+id: C-0028
+title: 이완 훈련
+en: Relaxation training
+origin: Edmund Jacobson(1930년대) 이후
+field: 임상심리학
+line: 근육을 일부러 조였다 푸는 등 몸의 긴장을 낮추는 연습
+grade: A
+replication: 반복 확인
+caveat: 불안 감소 근거는 단단하다. 학습 성적과의 직접 연결은 아직 약함
+studies:
+  - source: manzoni-2008
+    who: 연구 종합
+    result: 이완 훈련이 불안을 중간 크기로 줄임
+examples:
+  - who: 아이
+    text: 어깨에 힘 들어간 줄도 몰랐어
+sources: [manzoni-2008]
+books: [reasonless-calm, body-keeps-score]
+related: [느린 호흡]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,21 @@
+id: C-0043
+title: 지루함
+en: Boredom
+origin: Eastwood 외(2012)
+field: 인지심리학
+line: 주의를 어디에도 붙이지 못하는 상태. 하고 싶은데 할 게 없다고 느낌
+grade: C
+replication: 대체로 확인
+studies:
+  - source: eastwood-2012
+    who: 이론
+    result: 지루함은 주의 연결 실패와 그걸 알아차리는 데서 생긴다고 정의
+examples:
+  - who: 아이
+    text: 읽고 있는데 눈만 가고 머리는 딴 데 가
+sources: [eastwood-2012]
+books: [stolen-focus]
+related: [인지 부하]
+history:
+  - date: '2026.10.27'
+    note: 등재

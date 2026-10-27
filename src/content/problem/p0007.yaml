@@ -1,0 +1,83 @@
+id: P-0007
+title: 아는 문제인데 시험에서 틀림
+category: 기억·인출
+line: 채점하고 나서 '이거 아는 건데'가 반복되고, 그걸 매번 '실수'라고만 부르는 상황
+ages: [초고, 중등, 고등]
+grade: B
+facets:
+  when: [결과 후, 시험 중]
+  where: [교실, 집 책상]
+  with: [혼자]
+  subject: [수리, 전 과목]
+  freq: 매주
+factors:
+  main: 수치심·자책
+  sub: [불안·긴장, 완벽주의]
+says:
+  - who: 아이
+    text: 아 이거 아는 건데 실수했어
+  - who: 엄마
+    text: 또 실수야?
+  - who: 아이
+    text: 다음엔 안 틀려
+signals:
+  body: [채점할 때 얼굴이 굳음]
+  thought: ['실수니까 괜찮아', '난 왜 맨날 이래']
+  action: [틀린 문제 옆에 '실수'라고만 씀, 오답을 다시 안 풂]
+flow:
+  trigger: 채점에서 아는 유형을 틀린 걸 발견
+  thought: '"아, 실수"'
+  feel: 짧게 화가 나고 금방 넘기고 싶어짐
+  pattern: 이유를 따지지 않고 '실수'로 묶어 덮음
+  break: 같은 종류의 실수가 다음 시험에도 그대로 나옴
+  residue: '"난 덜렁대는 애"라는 이름표'
+causes:
+  - ‘실수’라는 이름이 원인 분석을 막음 → [[귀인]]
+  - 확신하고 틀린 걸 다시 보지 않으면 그 오류가 굳음 → [[오류에서 배우기]]
+  - 시간 압박이 검산할 여유를 뺏음 → [[압박 속 수행 저하]]
+triggers:
+  - text: '실수라고 쓰는 대신 "확신했는가" 상·중·하만 표시'
+    when: 채점할 때
+    time: 10초
+    who: 본인
+    grade: B
+  - text: 틀린 문제를 정답 보기 전에 한 번 더 혼자 풀기
+    when: 채점 직후
+    time: 3분
+    who: 본인
+    grade: B
+  - text: '"실수" 대신 "어디서 갈렸어?" 묻기'
+    when: 결과 이야기할 때
+    time: 30초
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[확신도 오답 노트]]'
+    basis: '[[오류에서 배우기]]'
+    grade: B
+    time: 문제당 10초
+    age: 초5 이상
+  - method: '[[섞어 풀기]]'
+    basis: '[[교차 연습]]'
+    grade: B
+    time: 20분
+    age: 초5 이상
+talk:
+  - avoid: 또 실수야? 정신 좀 차려
+    instead: 확실하다고 생각했던 거야, 헷갈렸던 거야?
+small:
+  today: 오늘 틀린 것 중 '확신했는데 틀린 것'만 골라 다시 풀기
+  week: 실수를 계산, 문제 잘못 읽음, 개념 혼동으로 나눠 세어 보기
+  month: 가장 많은 실수 종류 하나만 정해서 시험 때 확인 규칙 만들기
+recovery:
+  - 틀린 이유를 '실수' 말고 구체적인 말로 함
+  - 같은 종류 실수가 눈에 띄게 줄어듦
+expert:
+  - 글자나 숫자를 자주 바꿔 읽는 일이 반복될 때
+limits: 실수 분류법 자체는 현장 관찰(D). 확신도와 오류 교정 연구는 대학생 대상.
+related: [외운 것이 떠오르지 않음, 틀리면 바로 자책함]
+sources: [weiner-1985, butterfield-2001, metcalfe-2017, beilock-2001]
+books: [make-it-stick, unknown]
+history:
+  - date: '2026.10.27'
+    note: 등재

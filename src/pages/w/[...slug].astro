@@ -1,0 +1,141 @@
+---
+import '../../styles/doc.css';
+import Base from '../../layouts/Base.astro';
+import ProblemBody from '../../components/ProblemBody.astro';
+import ConceptBody from '../../components/ConceptBody.astro';
+import MethodBody from '../../components/MethodBody.astro';
+import MythBody from '../../components/MythBody.astro';
+import Sec from '../../components/Sec.astro';
+import RefList from '../../components/RefList.astro';
+import BookList from '../../components/BookList.astro';
+import AdSlot from '../../components/AdSlot.astro';
+import Wiki from '../../components/Wiki.astro';
+import { registry, linkCount, type Doc } from '../../lib/docs';
+import { categories, catUrl } from '../../data/categories';
+import { site } from '../../config/site';
+
+export async function getStaticPaths() {
+  const reg = await registry();
+  return reg.docs.map((doc) => ({ params: { slug: doc.title }, props: { title: doc.title } }));
+}
+
+const reg = await registry();
+const doc = reg.byTitle.get(Astro.props.title)!;
+const d = doc.data;
+
+const parentTitle = doc.title.includes('/') ? doc.title.split('/').slice(0, -1).join('/') : null;
+const parent = parentTitle ? reg.byTitle.get(parentTitle) : null;
+const children = reg.docs.filter((x) => x.title.startsWith(doc.title + '/'));
+
+const outDocs = [...doc.out].map((t) => reg.byTitle.get(t)).filter(Boolean) as Doc[];
+const backDocs = (reg.back.get(doc.title) ?? []).filter((x) => x !== doc);
+const sameSource = reg.docs.filter((x) => x !== doc && [...x.sourceIds].some((s) => doc.sourceIds.has(s)))
+  .filter((x) => !outDocs.includes(x) && !backDocs.includes(x)).slice(0, 8);
+const related = (d.related as string[]);
+
+const sourceIds = [...doc.sourceIds];
+const created = d.history[0].date;
+const updated = d.history.at(-1).date;
+
+const toc: [string, string][] = doc.kind === 'problem'
+  ? [['01', '이런 말로 나타남'], ['02', '신호'], ...(d.scene.length ? [['03', '장면']] as [string, string][] : []), ['04', '무너지는 흐름'], ['05', '왜 거기서 꺾이나'], ['06', '다시 살아나는 트리거'], ...(d.solutions.length ? [['07', '방법과 근거']] as [string, string][] : []), ...(d.talk.length ? [['08', d.audience === '부모' ? '나에게 하는 말' : '엄마의 말']] as [string, string][] : []), ['09', '작게 바꿔보기'], ['10', '나아지고 있다는 신호'], ['11', '한계와 전문가']]
+  : doc.kind === 'concept' ? [['01', '핵심 연구'], ...(d.examples.length ? [['02', '생활에서 들리는 말']] as [string, string][] : []), ['03', '이 개념이 쓰이는 곳']]
+  : doc.kind === 'method' ? [['01', '절차'], ['02', '흔한 실수'], ...(d.sheet ? [['03', '기록 양식']] as [string, string][] : [])]
+  : [['01', '실제 근거'], ['02', '왜 퍼졌나'], ['03', '대신 할 것']];
+const ids: Record<string, string> = {
+  '이런 말로 나타남': 'says', '신호': 'signals', '장면': 'scene', '무너지는 흐름': 'flow', '왜 거기서 꺾이나': 'causes',
+  '다시 살아나는 트리거': 'triggers', '방법과 근거': 'solutions', '엄마의 말': 'talk', '나에게 하는 말': 'talk', '작게 바꿔보기': 'small',
+  '나아지고 있다는 신호': 'recovery', '한계와 전문가': 'limits', '핵심 연구': 'studies', '생활에서 들리는 말': 'examples',
+  '이 개념이 쓰이는 곳': 'used', '절차': 'steps', '흔한 실수': 'mistakes', '기록 양식': 'sheet', '실제 근거': 'evidence',
+  '왜 퍼졌나': 'spread', '대신 할 것': 'instead',
+};
+
+const catName = doc.kind === 'problem' ? d.category : doc.ns;
+const plain = (s: string) => s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, a, b) => b ?? a);
+const description = plain(d.line ?? d.claim ?? '');
+const jsonld = {
+  '@context': 'https://schema.org', '@type': 'Article', headline: doc.title, description,
+  author: { '@type': 'Person', name: site.author }, datePublished: created.replace(/\./g, '-'),
+  dateModified: updated.replace(/\./g, '-'), inLanguage: 'ko', isPartOf: { '@type': 'WebSite', name: site.name },
+  citation: sourceIds.map((id) => { const s = reg.sources.get(id); return s?.doi ? `https://doi.org/${s.doi}` : s?.title; }),
+};
+const sameCat = reg.docs.filter((x) => (x.kind === 'problem' ? x.data.category : x.ns) === catName);
+---
+<Base title={doc.title} description={description} jsonld={jsonld}>
+  <div class="wrap doc-grid">
+    <aside class="doc-left tree" aria-label="분류">
+      {categories.map((c) => (
+        <>
+          <h3><a href={catUrl(c.name)} style="color:inherit">{c.name}</a></h3>
+          {c.name === catName && sameCat.map((x) => <a href={x.url} aria-current={x === doc ? 'page' : undefined}>{x.title.includes('/') && '└ '}{x.title.split('/').at(-1)}<span>{x.id}</span></a>)}
+        </>
+      ))}
+    </aside>
+
+    <article>
+      <div class="doc-meta mono">
+        <b>{doc.id}</b><span>{doc.ns}</span><span>등재 {created}</span><span>개정 {d.history.length}</span><span>연결 {linkCount(doc, reg)}</span>
+        <span class="status" data-s={d.status}>{d.status}</span>
+      </div>
+      <h1 class="doc-title">{doc.title.split('/').at(-1)}</h1>
+      <div class="doc-crumb">
+        <a href={catUrl(catName)}>{catName}</a>
+        {parent && <> · 상위 <a class="wl" href={parent.url}>{parent.title}</a></>}
+      </div>
+      {children.length > 0 && (
+        <div class="doc-sub"><span class="mute">하위</span>{children.map((c) => <a class="wl" href={c.url}>/{c.title.split('/').at(-1)}</a>)}</div>
+      )}
+      {(d.line) && <p class="doc-line"><Wiki t={d.line} /></p>}
+
+      {doc.kind === 'problem' && <ProblemBody d={d} id={doc.id} />}
+      {doc.kind === 'concept' && <ConceptBody d={d} title={doc.title} />}
+      {doc.kind === 'method' && <MethodBody d={d} />}
+      {doc.kind === 'myth' && <MythBody d={d} />}
+
+      {related.length > 0 && (
+        <Sec n="R" id="related" title="비슷한 문서">
+          <p><Wiki t={related.map((t) => `[[${t}]]`).join(' · ')} /></p>
+        </Sec>
+      )}
+
+      {sourceIds.length > 0 && (
+        <>
+          <AdSlot name="DOC-END" />
+          <Sec n="S" id="refs" title="참고문헌" note={`${sourceIds.length}건 · DOI 확인`}>
+            <RefList ids={sourceIds} />
+          </Sec>
+        </>
+      )}
+
+      {d.books.length > 0 && (
+        <Sec n="B" id="books" title="관련 도서">
+          <BookList ids={d.books} />
+        </Sec>
+      )}
+
+      <Sec n="H" id="history" title="문서 이력">
+        <ul class="history">{[...d.history].reverse().map((h: any) => <li><span class="mono">{h.date}</span><span>{h.note}</span></li>)}</ul>
+      </Sec>
+
+      <p class="disclaimer">이 문서는 {site.author}가 연구 문헌을 바탕으로 정리했습니다. 근거 등급 D는 연구가 아닌 현장 관찰입니다. 진단이나 치료를 대신하지 않습니다. 고칠 곳은 <a class="wl" href="/about/#contact">문의</a>로 알려 주세요.</p>
+    </article>
+
+    <aside class="doc-right" data-pagefind-ignore>
+      <nav class="panel toc" aria-label="목차">
+        <h3><span>목차</span></h3>
+        {toc.map(([n, t]) => <a href={`#${ids[t]}`}><span class="mono">{n}</span>{t}</a>)}
+      </nav>
+      {outDocs.length > 0 && (
+        <div class="panel"><h3><span>이 문서가 가리킴</span><span class="mono">{outDocs.length}</span></h3>
+          <ul>{outDocs.map((x) => <li><span class="mono">{x.id}</span><a class="wl" href={x.url}>{x.title}</a></li>)}</ul></div>
+      )}
+      <div class="panel"><h3><span>이 문서를 가리킴</span><span class="mono">{backDocs.length}</span></h3>
+        <ul>{backDocs.length ? backDocs.map((x) => <li><span class="mono">{x.id}</span><a class="wl" href={x.url}>{x.title}</a></li>) : <li class="mute">아직 없음</li>}</ul></div>
+      {sameSource.length > 0 && (
+        <div class="panel"><h3><span>같은 출처를 쓰는 문서</span><span class="mono">{sameSource.length}</span></h3>
+          <ul>{sameSource.map((x) => <li><span class="mono">{x.id}</span><a class="wl" href={x.url}>{x.title}</a></li>)}</ul></div>
+      )}
+      <AdSlot name="DOC-RIGHT" />
+    </aside>
+  </div>
+</Base>

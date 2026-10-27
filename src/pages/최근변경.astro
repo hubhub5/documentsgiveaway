@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { registry } from '../lib/docs';
+const reg = await registry();
+const rows = reg.docs.flatMap((d) => d.data.history.map((h: any, i: number) => ({ ...h, doc: d, rev: i + 1 })))
+  .sort((a, b) => b.date.localeCompare(a.date) || b.doc.id.localeCompare(a.doc.id));
+---
+<Base title="최근 변경" current="최근 변경" description="문서가 등재되고 고쳐진 기록">
+  <div class="wrap page" style="max-width:900px">
+    <div class="page-head"><p class="kicker mono">CHANGELOG · {rows.length}</p><h1>최근 변경</h1><p>등재와 수정 기록을 날짜순으로 남깁니다.</p></div>
+    <table class="tbl">
+      <thead><tr><th>날짜</th><th>문서</th><th>제목</th><th>개정</th><th>내용</th></tr></thead>
+      <tbody>{rows.map((r) => <tr><td class="mono">{r.date}</td><td class="mono mute">{r.doc.id}</td><td><a class="wl" href={r.doc.url}>{r.doc.title}</a></td><td class="mono">r{r.rev}</td><td class="mute">{r.note}</td></tr>)}</tbody>
+    </table>
+  </div>
+</Base>

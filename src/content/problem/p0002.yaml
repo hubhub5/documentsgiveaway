@@ -1,0 +1,90 @@
+id: P-0002
+title: 외운 것이 떠오르지 않음/초등
+category: 기억·인출
+line: 받아쓰기나 단원평가에서 집에선 맞혔던 걸 틀리고, 울거나 시험지를 숨기는 상황
+ages: [초고]
+grade: B
+facets:
+  when: [시험 중, 결과 후]
+  where: [교실, 거실]
+  with: [선생님 앞, 엄마 옆]
+  subject: [암기]
+  freq: 가끔
+factors:
+  main: 수치심·자책
+  sub: [부담·기대]
+says:
+  - who: 아이
+    text: 집에서는 다 맞았는데…
+  - who: 아이
+    text: 엄마한테 말하지 마
+signals:
+  body: [눈물이 먼저 남, 배가 아프다고 함]
+  thought: ['엄마가 화낼 거야']
+  action: [시험지를 가방 깊이 넣음, 점수 물으면 딴 얘기]
+scene:
+  - time: 금요일 하교 후 3시, 현관
+    lines:
+      - who: 엄마
+        text: 받아쓰기 몇 개 맞았어?
+      - who: 아이
+        text: (신발 벗다 말고) 몰라
+flow:
+  trigger: 집에서 연습한 단어가 시험지에서 안 써짐
+  thought: '"엄마랑 했는데 왜 틀렸지"'
+  feel: 눈이 뜨거워지고 연필 잡은 손에 힘이 들어감
+  pattern: 지웠다 썼다 반복하다 시간이 끝남
+  break: 결과를 숨기거나 거짓말로 넘어감
+  residue: 다음 받아쓰기 전날 배가 아프다고 함 → [[책상 앞에서 배나 머리가 아픔]]
+causes:
+  - 엄마 옆에서 할 땐 엄마 표정이 힌트가 됨. 혼자 꺼낸 적은 없음 → [[인출 연습]]
+  - 틀리면 엄마가 실망한다는 걸 이미 앎 → [[부모를 실망시킬까 두려움]]
+triggers:
+  - text: 시험 전날, 엄마는 문제만 부르고 표정은 감추기
+    when: 연습할 때
+    time: 10분
+    who: 엄마
+    grade: D
+  - text: 점수보다 '어떤 단어가 어려웠어?' 먼저 묻기
+    when: 하교 직후
+    time: 30초
+    who: 엄마
+    grade: D
+  - text: 틀린 단어를 같이 세 번 써 보고 끝내기. 잔소리 없이
+    when: 결과 본 날
+    time: 3분
+    who: 같이
+    grade: D
+solutions:
+  - method: '[[백지 인출]]'
+    basis: '[[인출 연습]]'
+    grade: A
+    time: 5분
+    age: 초3 이상
+  - method: '[[간격 두고 다시 꺼내기]]'
+    basis: '[[간격 효과]]'
+    grade: A
+    time: 하루 3분
+    age: 전 연령
+talk:
+  - avoid: 어제 그렇게 했는데 또 틀렸어?
+    instead: 어떤 단어가 제일 헷갈렸어?
+  - avoid: 숨기면 더 혼나
+    instead: 틀린 거 보여 줘도 엄마 안 화내
+small:
+  today: 내일 단어 중 다섯 개만, 엄마는 부르기만 하고 아이 혼자 쓰기
+  week: 이틀 간격으로 두 번 꺼내 쓰기
+  month: 시험지를 숨기지 않고 먼저 보여 준 날 세어 보기
+recovery:
+  - 틀린 시험지를 먼저 꺼내 보여 줌
+  - 시험 전날 배 아프다는 말이 줄어듦
+expert:
+  - 시험 전 복통이나 구토가 매번 반복될 때
+  - 학교 가기를 거부할 때
+limits: 초등 저·중학년 대상 인출 연습 연구는 적다. 이 문서의 트리거 대부분은 현장 관찰(D).
+related: [혼난 과목을 피함, 엄마가 옆에 있으면 더 못함]
+sources: [roediger-2006]
+books: [between-parent-child, metacognition]
+history:
+  - date: '2026.10.27'
+    note: 등재

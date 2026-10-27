@@ -1,0 +1,80 @@
+id: P-0021
+title: 숨을 참고 어깨가 굳음
+category: 몸
+line: 문제를 풀 때 자기도 모르게 숨을 참고, 한 시간 뒤엔 어깨와 목이 딱딱해져 있는 상황
+ages: [중등, 고등]
+grade: C
+facets:
+  when: [공부 중, 시험 중]
+  where: [집 책상, 독서실, 교실]
+  with: [혼자]
+  subject: [수리, 전 과목]
+  freq: 거의 매일
+factors:
+  main: 신체 각성
+  sub: [불안·긴장]
+says:
+  - who: 아이
+    text: 목이 너무 뻐근해
+  - who: 엄마
+    text: 너 숨 쉬고 있어?
+signals:
+  body: [얕은 숨, 어깨가 귀 쪽으로 올라감, 턱에 힘, 손목 통증]
+  thought: ['빨리 끝내야 해']
+  action: [한숨을 크게 쉼, 목을 자주 돌림]
+flow:
+  trigger: 어려운 문제나 시간 제한
+  thought: '"집중해야 해"'
+  feel: 숨이 멈추고 어깨가 올라감
+  pattern: 긴장을 집중으로 착각하고 그대로 유지
+  break: 한 시간 뒤 두통과 피로로 공부를 멈춤
+  residue: 공부 시간이 길어질수록 몸이 먼저 지침
+causes:
+  - 긴장한 몸은 숨을 얕게 하고 근육을 조임 → [[느린 호흡]]
+  - 긴장하면 집중된다고 믿음 → [[각성 재평가]]
+triggers:
+  - text: 문제 하나 끝날 때마다 날숨 한 번 길게
+    when: 문제 사이
+    time: 5초
+    who: 본인
+    grade: C
+  - text: 어깨를 귀까지 올렸다 툭 떨어뜨리기
+    when: 30분마다
+    time: 10초
+    who: 본인
+    grade: A
+  - text: 등 뒤에서 '어깨 내려가 있어?' 한마디
+    when: 공부 중
+    time: 3초
+    who: 엄마
+    grade: D
+solutions:
+  - method: '[[힘 줬다 풀기]]'
+    basis: '[[이완 훈련]]'
+    grade: A
+    time: 1–2분
+    age: 전 연령
+  - method: '[[날숨 길게 쉬기]]'
+    basis: '[[느린 호흡]]'
+    grade: C
+    time: 30초
+    age: 전 연령
+talk:
+  - avoid: 자세 똑바로 해
+    instead: 어깨 한 번 떨어뜨려 볼래?
+small:
+  today: 30분 타이머마다 어깨 떨어뜨리기
+  week: 문제 사이 날숨을 습관처럼 다섯 번
+  month: 공부 끝날 때 목·어깨 뻐근함을 1–5로 적어 변화 보기
+recovery:
+  - 숨 참고 있는 걸 스스로 알아챔
+  - 공부 끝난 뒤 두통이 줄어듦
+expert:
+  - 두통이 매일 있거나 진통제를 자주 먹을 때
+limits: 이완과 호흡의 불안 감소 근거는 있으나 학습 성과와의 직접 근거는 약하다.
+related: [책상 앞에서 배나 머리가 아픔, 시험 중 머리가 하얘짐]
+sources: [manzoni-2008, zaccaro-2018, jamieson-2010]
+books: [reasonless-calm, body-keeps-score]
+history:
+  - date: '2026.10.27'
+    note: 등재

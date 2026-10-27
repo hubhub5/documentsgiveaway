@@ -1,0 +1,82 @@
+id: P-0020
+title: 공부만 하면 졸림
+category: 몸
+line: 놀 때는 멀쩡한데 책만 펴면 하품이 나고 눈이 감기는 상황
+ages: [초고, 중등, 고등]
+grade: C
+facets:
+  when: [공부 중]
+  where: [집 책상, 독서실, 교실]
+  with: [혼자]
+  subject: [독해, 암기]
+  freq: 거의 매일
+factors:
+  main: 회피
+  sub: [주의 분산, 신체 각성]
+says:
+  - who: 아이
+    text: 책만 펴면 잠이 쏟아져
+  - who: 엄마
+    text: 게임할 땐 안 졸리잖아
+signals:
+  body: [하품, 눈꺼풀이 무거움, 턱 괴기]
+  thought: ['10분만 자고', '지루해']
+  action: [같은 줄을 반복해서 읽음, 엎드림]
+flow:
+  trigger: 이해 안 되는 문장이나 단조로운 암기가 이어짐
+  thought: '"무슨 말이야"'
+  feel: 머리가 멍해지고 눈이 감김
+  pattern: 눈은 줄을 따라가는데 머리에는 남는 게 없음
+  break: 엎드려 자고 나서 '오늘도 못 했다'
+  residue: 공부 = 졸린 것이라는 연결이 굳음
+causes:
+  - 주의를 붙일 곳을 못 찾는 상태 → [[지루함]]
+  - 실제로 잠이 부족할 수 있음 → [[수면과 기억]]
+  - 읽기만 하는 수동적인 공부라 몸이 쉬는 모드로 감 → [[인출 연습]]
+triggers:
+  - text: 서서 소리 내어 한 문단 읽기
+    when: 하품이 연달아 날 때
+    time: 1분
+    who: 본인
+    grade: D
+  - text: 읽기를 멈추고 책 덮고 한 줄 말하기로 바꾸기
+    when: 같은 줄 반복할 때
+    time: 20초
+    who: 본인
+    grade: B
+  - text: 진짜 졸리면 15분 타이머 맞추고 자기
+    when: 눈이 감길 때
+    time: 15분
+    who: 본인
+    grade: D
+solutions:
+  - method: '[[읽고 한 줄로 말하기]]'
+    basis: '[[자기 설명]]'
+    grade: B
+    time: 문단당 20초
+    age: 초3 이상
+  - method: '[[백지 인출]]'
+    basis: '[[인출 연습]]'
+    grade: A
+    time: 10분
+    age: 초4 이상
+talk:
+  - avoid: 게임할 땐 멀쩡하잖아
+    instead: 어떤 부분 할 때 제일 졸려?
+small:
+  today: 졸릴 때 읽기 대신 덮고 말하기로 바꾸기
+  week: 일주일 동안 잠든 시각을 적어 보기
+  month: 졸린 과목은 하루 중 가장 맑은 시간으로 옮기기
+recovery:
+  - 졸린 순간 스스로 방법을 바꿈
+  - 같은 시간 공부해도 남는 게 늘었다고 말함
+expert:
+  - 밤에 충분히 자는데도 낮에 자주 잠들 때
+  - 코골이나 호흡 멈춤이 있을 때
+limits: 공부 중 졸음 자체를 다룬 연구는 적다. 지루함·수면 연구에서 추론(C).
+related: [긴 글을 보면 시작 전에 지침, 시험 전날 잠들지 못함]
+sources: [eastwood-2012, diekelmann-2010, gillenoneel-2013, chi-1994]
+books: [why-we-sleep, stolen-focus]
+history:
+  - date: '2026.10.27'
+    note: 등재

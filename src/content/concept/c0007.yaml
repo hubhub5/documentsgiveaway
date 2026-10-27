@@ -1,0 +1,28 @@
+id: C-0007
+title: 시험 불안
+en: Test anxiety
+origin: 1950년대 이후 연구
+field: 교육심리학
+line: 평가 상황에서 걱정과 몸의 긴장이 커져 아는 것을 꺼내지 못하게 되는 상태
+grade: A
+replication: 반복 확인
+caveat: 관계의 크기는 작은 편. 불안이 높다고 모두 성적이 떨어지는 것은 아님
+studies:
+  - source: hembree-1988
+    who: 연구 수백 편 종합
+    result: 시험 불안은 성적과 음의 관계. 행동·인지 처치로 불안과 성적 모두 나아짐
+  - source: embse-2018
+    who: 30년 연구 종합
+    result: 시험 불안과 성적 사이에 작은 음의 상관
+  - source: eysenck-2007
+    who: 이론
+    result: 걱정이 주의 통제를 빼앗아 같은 일을 하는 데 더 많은 힘이 듦
+examples:
+  - who: 아이
+    text: 시험지 받는 순간 심장이 막 뛰어
+sources: [hembree-1988, embse-2018, eysenck-2007]
+books: [unknown, reasonless-calm]
+related: [압박 속 수행 저하, 각성 재평가, 표현적 글쓰기, 스트레스와 기억 인출]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,26 @@
+id: C-0015
+title: 미루기와 기분 조절
+en: Procrastination as mood regulation
+origin: Steel(2007), Sirois·Pychyl(2013)
+field: 성격·동기심리학
+line: 미루기는 시간 관리 문제라기보다 지금 싫은 기분을 피하려는 선택에 가깝다
+grade: A
+replication: 대체로 확인
+studies:
+  - source: steel-2007
+    who: 연구 수백 편 종합
+    result: 미루기는 과제가 싫을수록, 보상이 멀수록, 충동성이 높을수록 커짐
+  - source: sirois-2013
+    who: 이론 종합
+    result: 당장 기분을 낫게 하려는 선택이 장기 목표보다 앞설 때 미루게 됨
+examples:
+  - who: 아이
+    text: 조금만 쉬고 할게
+  - who: 아이
+    text: 지금은 기분이 안 나
+sources: [steel-2007, sirois-2013]
+books: [atomic-habits, stolen-focus]
+related: [계획 오류, 자기 자비, 실행 의도]
+history:
+  - date: '2026.10.27'
+    note: 등재

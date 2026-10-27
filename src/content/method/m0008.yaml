@@ -1,0 +1,22 @@
+id: M-0008
+title: 2분 시작
+line: 공부 전체가 아니라 '2분만 펴 보기'를 목표로 잡아 시작 문턱을 낮추는 방법
+time: 2분
+tools: 타이머
+ages: 전 연령
+mode: 둘 다
+grade: D
+basis: [미루기와 기분 조절]
+steps:
+  - 해야 할 것 중 제일 쉬운 한 줄을 고른다
+  - 타이머를 2분에 맞춘다
+  - 2분이 지나면 계속할지 멈출지 정말로 고른다
+  - 멈춰도 '시작한 날'로 표시한다
+mistakes:
+  - 2분이라고 해 놓고 엄마가 30분을 요구한다
+  - 처음 2분에 가장 어려운 걸 고른다
+sources: [steel-2007, sirois-2013]
+books: [atomic-habits, unknown]
+history:
+  - date: '2026.10.27'
+    note: 등재

@@ -1,0 +1,28 @@
+id: C-0039
+title: 오류에서 배우기
+en: Learning from errors / Hypercorrection
+origin: Metcalfe 등
+field: 인지심리학
+line: 틀리고 나서 고친 내용이, 특히 확신하고 틀린 내용이 더 잘 남는다
+grade: B
+replication: 대체로 확인
+caveat: 틀린 뒤 바로 정답을 확인할 때의 이야기. 틀린 채로 두면 오류가 굳는다
+studies:
+  - source: butterfield-2001
+    who: 대학생
+    result: 확신하고 틀린 답일수록 정정 후 더 잘 기억함
+  - source: metcalfe-2017
+    who: 연구 종합
+    result: 오류를 만들고 피드백받는 과정이 학습을 도움
+  - source: kapur-2008
+    who: 싱가포르 고등학생
+    result: 먼저 헤매며 풀어 본 집단이 이후 새 문제에 더 잘 적용함
+examples:
+  - who: 아이
+    text: 이거 확실히 맞는 줄 알았는데
+sources: [butterfield-2001, metcalfe-2017, kapur-2008]
+books: [make-it-stick]
+related: [바람직한 어려움, 자기 자비]
+history:
+  - date: '2026.10.27'
+    note: 등재

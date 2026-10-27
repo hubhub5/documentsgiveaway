@@ -1,0 +1,98 @@
+---
+import Base from '../layouts/Base.astro';
+import Block from '../components/Block.astro';
+import { registry } from '../lib/docs';
+import { FACETS, FACTORS, AGES } from '../content.config';
+
+const reg = await registry();
+const problems = reg.docs.filter((d) => d.kind === 'problem');
+const groups: [string, string, readonly string[]][] = [
+  ['when', '언제', FACETS.when],
+  ['factor', '심리 요인', FACTORS],
+  ['age', '연령', AGES],
+  ['where', '어디서', FACETS.where],
+  ['with', '누구와', FACETS.with],
+  ['subject', '과목', FACETS.subject],
+];
+const attrs = (d: any) => ({
+  'data-when': d.facets.when.join('|'),
+  'data-factor': [d.factors.main, ...d.factors.sub].join('|'),
+  'data-age': d.ages.join('|'),
+  'data-where': d.facets.where.join('|'),
+  'data-with': d.facets.with.join('|'),
+  'data-subject': d.facets.subject.join('|'),
+});
+---
+<Base title="상황으로 찾기" current="찾기" description="언제, 어떤 마음으로, 몇 살에 생기는 문제인지 골라서 문서를 찾습니다.">
+  <div class="wrap page">
+    <div class="page-head"><p class="kicker mono">FILTER</p><h1>상황으로 찾기</h1><p>지금 상황에 맞는 칸을 고르세요. 같은 줄에서는 하나라도 맞으면, 다른 줄끼리는 모두 맞아야 보입니다.</p></div>
+
+    <div class="facets">
+      {groups.map(([key, label, values]) => (
+        <div class="facet" data-key={key}>
+          <span class="facet-l">{label}</span>
+          <div class="tags">{values.map((v) => <button class="tag" type="button" data-v={v}>{v}</button>)}</div>
+        </div>
+      ))}
+    </div>
+    <p class="mono mute count"><span id="n">{problems.length}</span> / {problems.length}건 <button id="reset" type="button" class="mono">초기화</button></p>
+
+    <div class="blocks" id="grid">
+      {problems.map((d) => <div class="cell" {...attrs(d.data)}><Block doc={d} reg={reg} /></div>)}
+    </div>
+    <p id="none" class="mute" hidden style="padding:24px 0">맞는 문서가 없습니다. 조건을 하나 빼 보세요.</p>
+  </div>
+</Base>
+<style>
+  .facets { border-top: 1px solid var(--ink); margin-bottom: 14px; }
+  .facet { display: grid; grid-template-columns: 84px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .facet-l { font-size: 12px; color: var(--mute); padding-top: 3px; }
+  .facet .tag { cursor: pointer; }
+  .facet .tag:hover { border-color: var(--ink); }
+  .count { margin-bottom: 12px; display: flex; gap: 12px; align-items: center; }
+  .count button { color: var(--ink-2); border-bottom: 1px dotted var(--ink-2); }
+  .cell { display: contents; }
+  .cell[hidden] { display: none; }
+  @media (max-width: 520px) { .facet { grid-template-columns: 1fr; gap: 6px; } }
+</style>
+<script>
+  const sel: Record<string, Set<string>> = {};
+  const cells = [...document.querySelectorAll<HTMLElement>('#grid .cell')];
+  function apply() {
+    let n = 0;
+    for (const c of cells) {
+      const ok = Object.entries(sel).every(([k, vs]) => !vs.size || (c.dataset[k] || '').split('|').some((v) => vs.has(v)));
+      c.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('n')!.textContent = String(n);
+    document.getElementById('none')!.hidden = n > 0;
+    const q = new URLSearchParams();
+    for (const [k, vs] of Object.entries(sel)) if (vs.size) q.set(k, [...vs].join(','));
+    history.replaceState(null, '', q.toString() ? '?' + q : location.pathname);
+  }
+  document.querySelectorAll<HTMLElement>('.facet').forEach((f) => {
+    const k = f.dataset.key!;
+    sel[k] = new Set();
+    f.querySelectorAll<HTMLButtonElement>('.tag').forEach((b) => b.addEventListener('click', () => {
+      const v = b.dataset.v!;
+      sel[k].has(v) ? sel[k].delete(v) : sel[k].add(v);
+      b.classList.toggle('on', sel[k].has(v));
+      apply();
+    }));
+  });
+  document.getElementById('reset')!.addEventListener('click', () => {
+    Object.values(sel).forEach((s) => s.clear());
+    document.querySelectorAll('.facet .tag').forEach((b) => b.classList.remove('on'));
+    apply();
+  });
+  const init = new URLSearchParams(location.search);
+  init.forEach((v, k) => {
+    if (!sel[k]) return;
+    v.split(',').forEach((x) => {
+      sel[k].add(x);
+      document.querySelector(`.facet[data-key="${k}"] .tag[data-v="${x}"]`)?.classList.add('on');
+    });
+  });
+  apply();
+</script>
