@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { u } from './url';
 
 export type Kind = 'problem' | 'concept' | 'method' | 'myth';
 type Data = CollectionEntry<'problem'>['data'] | CollectionEntry<'concept'>['data']
@@ -25,8 +26,8 @@ export interface Registry {
 
 const LINK = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
 
-export const docUrl = (title: string) => '/w/' + title.split('/').map(encodeURIComponent).join('/') + '/';
-export const sourceUrl = (id: string) => `/r/${id}/`;
+export const docUrl = (title: string) => u('/w/') + title.split('/').map(encodeURIComponent).join('/') + '/';
+export const sourceUrl = (id: string) => u(`/r/${id}/`);
 
 function collectText(v: unknown, acc: string[]) {
   if (typeof v === 'string') acc.push(v);

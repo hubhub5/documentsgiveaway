@@ -1,4 +1,5 @@
 ---
+import { u } from "../../lib/url";
 import '../../styles/doc.css';
 import Base from '../../layouts/Base.astro';
 import ProblemBody from '../../components/ProblemBody.astro';
@@ -117,7 +118,7 @@ const sameCat = reg.docs.filter((x) => (x.kind === 'problem' ? x.data.category :
         <ul class="history">{[...d.history].reverse().map((h: any) => <li><span class="mono">{h.date}</span><span>{h.note}</span></li>)}</ul>
       </Sec>
 
-      <p class="disclaimer">이 문서는 {site.author}가 연구 문헌을 바탕으로 정리했습니다. 근거 등급 D는 연구가 아닌 현장 관찰입니다. 진단이나 치료를 대신하지 않습니다. 고칠 곳은 <a class="wl" href="/about/#contact">문의</a>로 알려 주세요.</p>
+      <p class="disclaimer">이 문서는 {site.author}가 연구 문헌을 바탕으로 정리했습니다. 근거 등급 D는 연구가 아닌 현장 관찰입니다. 진단이나 치료를 대신하지 않습니다. 고칠 곳은 <a class="wl" href={u('/about/#contact')}>문의</a>로 알려 주세요.</p>
     </article>
 
     <aside class="doc-right" data-pagefind-ignore>

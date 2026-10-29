@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 import Base from '../layouts/Base.astro';
 import AdSlot from '../components/AdSlot.astro';
 import { registry, lastDate } from '../lib/docs';
@@ -36,7 +37,7 @@ const pick = categories.filter((c) => c.ns === '문제' || c.ns === '부모').fl
     </section>
 
     <section class="home-sec">
-      <div class="sec-row"><h2>분류</h2><a class="mono" href="/분류/">전체 보기 →</a></div>
+      <div class="sec-row"><h2>분류</h2><a class="mono" href={u('/분류/')}>전체 보기 →</a></div>
       <div class="blocks">
         {categories.map((c) => (
           <a class="block" href={catUrl(c.name)}>
@@ -50,7 +51,7 @@ const pick = categories.filter((c) => c.ns === '문제' || c.ns === '부모').fl
 
     {pick.length > 0 && (
       <section class="home-sec">
-        <div class="sec-row"><h2>30초 안에 할 수 있는 것</h2><a class="mono" href="/트리거/">트리거 모음 →</a></div>
+        <div class="sec-row"><h2>30초 안에 할 수 있는 것</h2><a class="mono" href={u('/트리거/')}>트리거 모음 →</a></div>
         <ul class="quick">
           {pick.map((t) => (
             <li><span class="mono">{t.time}</span><b>{t.text.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_: string, a: string, b?: string) => b ?? a)}</b><a class="wl" href={t.doc.url}>{t.doc.title}</a></li>
@@ -62,7 +63,7 @@ const pick = categories.filter((c) => c.ns === '문제' || c.ns === '부모').fl
     <AdSlot name="HOME" />
 
     <section class="home-sec">
-      <div class="sec-row"><h2>최근 변경</h2><a class="mono" href="/최근변경/">전체 →</a></div>
+      <div class="sec-row"><h2>최근 변경</h2><a class="mono" href={u('/최근변경/')}>전체 →</a></div>
       <table class="tbl changes">
         <tbody>
           {changes.map((c) => (
@@ -73,9 +74,9 @@ const pick = categories.filter((c) => c.ns === '문제' || c.ns === '부모').fl
     </section>
 
     <section class="home-sec home-foot">
-      <a href="/임의문서/" class="mono">임의 문서 열기 [R]</a>
-      <a href="/편집원칙/" class="mono">편집 원칙</a>
-      <a href="/근거등급/" class="mono">근거 등급 A–D</a>
+      <a href={u('/임의문서/')} class="mono">임의 문서 열기 [R]</a>
+      <a href={u('/편집원칙/')} class="mono">편집 원칙</a>
+      <a href={u('/근거등급/')} class="mono">근거 등급 A–D</a>
     </section>
   </div>
 </Base>

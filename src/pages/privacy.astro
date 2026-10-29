@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 import Info from '../layouts/Info.astro';
 import { site } from '../config/site';
 ---
@@ -15,5 +16,5 @@ import { site } from '../config/site';
     <li>웹 글꼴(jsDelivr, Google Fonts) 요청 과정에서 IP 주소가 해당 서비스에 전달될 수 있습니다.</li>
   </ul>
   <h2>문의</h2>
-  <p>개인정보 관련 문의는 <a class="wl" href="/about/#contact">문의</a> 항목의 주소로 보내 주세요.</p>
+  <p>개인정보 관련 문의는 <a class="wl" href={u('/about/#contact')}>문의</a> 항목의 주소로 보내 주세요.</p>
 </Info>

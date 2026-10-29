@@ -1,3 +1,4 @@
+import { u } from '../lib/url';
 export interface Category { name: string; code: string; line: string; ns: '문제' | '부모' | '개념' | '방법' | '오해' }
 
 export const categories: Category[] = [
@@ -13,4 +14,4 @@ export const categories: Category[] = [
   { name: '오해', code: 'MYT', ns: '오해', line: '근거가 약한데 널리 퍼진 말' },
 ];
 
-export const catUrl = (name: string) => '/분류/' + encodeURIComponent(name) + '/';
+export const catUrl = (name: string) => u('/분류/') + encodeURIComponent(name) + '/';

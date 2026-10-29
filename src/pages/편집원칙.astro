@@ -1,4 +1,5 @@
 ---
+import { u } from "../lib/url";
 import Info from '../layouts/Info.astro';
 ---
 <Info title="편집 원칙" code="POLICY" description="이 사전의 문서를 쓰고 고치는 기준입니다.">
@@ -12,7 +13,7 @@ import Info from '../layouts/Info.astro';
   <ul>
     <li>학술지에 실린 연구는 DOI를 Crossref 메타데이터와 대조한 뒤에만 싣습니다.</li>
     <li>연구 결과를 옮길 때 원문에 없는 수치나 해석을 더하지 않습니다.</li>
-    <li>후속 연구에서 효과가 작게 나오거나 엇갈린 경우 함께 적습니다. 예: <a class="wl" href="/w/마인드셋/">마인드셋</a></li>
+    <li>후속 연구에서 효과가 작게 나오거나 엇갈린 경우 함께 적습니다. 예: <a class="wl" href={u('/w/마인드셋/')}>마인드셋</a></li>
     <li>현장 관찰은 근거 등급 D로 따로 표시합니다.</li>
   </ul>
   <h2>쓰지 않는 표현</h2>
